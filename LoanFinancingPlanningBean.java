@@ -55,6 +55,8 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     /** GitHubからPull確認 */
     private String gitpull;
 
+    /** GitHubからフェッチ確認 */
+    
     /** Id(サービス種別) */
     private String id;
 
