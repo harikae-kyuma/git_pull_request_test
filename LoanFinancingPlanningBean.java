@@ -5,13 +5,10 @@
 @SuppressWarnings("serial")
 public class LoanFinancingPlanningBean extends EmbFacesBean {
 
-    /** GitTest */
-    private String gittest;
-
     /** GitHubからPull確認 */
     private String gitpull;
 
-    /** GitHubからフェッチ確認 */
+    /** フェッチ確認 */
+    /** プル確認 */
 
-    
 }
