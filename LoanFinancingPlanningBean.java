@@ -42,50 +42,53 @@ import com.brainyworks.marketbrain.tb.interfacemodel.tbadministration.loandesign
 import com.brainyworks.marketbrain.util.process.StringFormat;
 
 /**
- * ƒ[ƒ“Šeí\İŒv(İŒv)
- * ì¬“ú : (2008/07/03)
+ * ãƒ­ãƒ¼ãƒ³å„ç¨®ç”³è¾¼è¨­è¨ˆ(è¨­è¨ˆ)
+ * ä½œæˆæ—¥ : (2008/07/03)
  * @author: I.suzuki
  */
 @SuppressWarnings("serial")
 public class LoanFinancingPlanningBean extends EmbFacesBean {
 
-    /** Id(ƒT[ƒrƒXí•Ê) */
+    /** GitTest */
+    private String gittest;
+
+    /** Id(ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥) */
     private String id;
 
-    /** –¼Ì(ƒ[ƒ“ƒe[ƒuƒ‹–¼) */
+    /** åç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å) */
     private String name;
 
-    /** —ªÌ(ƒ[ƒ“ƒe[ƒuƒ‹—ªÌ) */
+    /** ç•¥ç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«ç•¥ç§°) */
     private String abbreviation;
 
-    /** İŒvƒT[ƒrƒXí—Ş(ƒ[ƒ“or‘¼ƒT[ƒrƒX) */
+    /** è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡(ãƒ­ãƒ¼ãƒ³orä»–ã‚µãƒ¼ãƒ“ã‚¹) */
     private String designServiceKind;
 
-    /** İŒvó‹µ */
+    /** è¨­è¨ˆçŠ¶æ³ */
     private String designSituation;
 
-    /** İŒv‰Â”\€–ÚƒRƒ“ƒ{‚É‚Ä‘I‘ğ‚³‚ê‚½ƒT[ƒrƒX‚ÌId(ƒT[ƒrƒXí•Ê) */
+    /** è¨­è¨ˆå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœã«ã¦é¸æŠã•ã‚ŒãŸã‚µãƒ¼ãƒ“ã‚¹ã®Id(ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥) */
     private String selectedId;
 
-    /** İŒv‰Â”\€–ÚƒRƒ“ƒ{‚É‚Ä‘I‘ğ‚³‚ê‚½ƒT[ƒrƒX‚Ì–¼Ì(ƒ[ƒ“ƒe[ƒuƒ‹–¼) */
+    /** è¨­è¨ˆå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœã«ã¦é¸æŠã•ã‚ŒãŸã‚µãƒ¼ãƒ“ã‚¹ã®åç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å) */
     private String selectedName;
 
-    /** İŒv‰Â”\€–ÚƒRƒ“ƒ{‚É‚Ä‘I‘ğ‚³‚ê‚½ƒT[ƒrƒX‚ÌİŒvó‹µ */
+    /** è¨­è¨ˆå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœã«ã¦é¸æŠã•ã‚ŒãŸã‚µãƒ¼ãƒ“ã‚¹ã®è¨­è¨ˆçŠ¶æ³ */
     private String selectedDesignSituation;
 
-    /** ‹à—˜‘I‘ğƒ‰ƒWƒI‚Ì’l */
+    /** é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªã®å€¤ */
     private String interestRateSelectRadioValue;
 
-    /** ‹à—˜(®”•”) */
+    /** é‡‘åˆ©(æ•´æ•°éƒ¨) */
     private String interestRateInt;
 
-    /** ‹à—˜(¬”•”) */
+    /** é‡‘åˆ©(å°æ•°éƒ¨) */
     private String interestRateDecimal;
 
-    /** ”NŠÔ•ÔÏŠz */
+    /** å¹´é–“è¿”æ¸ˆé¡ */
     private String yearRepayment;
 
-    /** \‚Ì•ÛØ‰ïĞ */
+    /** ç”³è¾¼æ™‚ã®ä¿è¨¼ä¼šç¤¾ */
     private String guarantyCompany;
 
     /** BooK */
@@ -94,116 +97,116 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     /** Sheet */
     private String sheet;
 
-    /** ‘I‘ğƒ{ƒ^ƒ“‰Ÿ‰ºƒtƒ‰ƒO */
+    /** é¸æŠãƒœã‚¿ãƒ³æŠ¼ä¸‹ãƒ•ãƒ©ã‚° */
     private boolean isSelected;
 
-    /** ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‚Å‘I‘ğ‚³‚ê‚½€–Ú */ 
+    /** é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœã§é¸æŠã•ã‚ŒãŸé …ç›® */ 
     private String selectedService;
 
-    /** \‚Ì•ÛØ‰ïĞƒRƒ“ƒ{ */
+    /** ç”³è¾¼æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœ */
     private List<SelectItem> selectGuarantyCompanyList;
 
-    /** BookƒRƒ“ƒ{İ’è—pƒŠƒXƒg */
+    /** Bookã‚³ãƒ³ãƒœè¨­å®šç”¨ãƒªã‚¹ãƒˆ */
     private List<FileNameCommonModel> bookList = new ArrayList<FileNameCommonModel>();
 
-    /** SheetƒRƒ“ƒ{İ’è—pƒŠƒXƒg */
+    /** Sheetã‚³ãƒ³ãƒœè¨­å®šç”¨ãƒªã‚¹ãƒˆ */
     private List<SheetNameCommonModel> sheetList = new ArrayList<SheetNameCommonModel>();
 
-    /** BooKƒRƒ“ƒ{ */
+    /** BooKã‚³ãƒ³ãƒœ */
     private List<SelectItem> selectBooKList;
 
-    /** SheetƒRƒ“ƒ{ */
+    /** Sheetã‚³ãƒ³ãƒœ */
     private List<SelectItem> selectSheetList;
 
-    /** ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{ */
+    /** é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœ */
     private List<SelectItem> selectableServiceList = new ArrayList<SelectItem>();
 
-    /** İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI‚Åƒ[ƒ“‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚© */
+    /** è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªã§ãƒ­ãƒ¼ãƒ³ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹ */
     private boolean isLoan;
 
-    /** ‹à—˜‘I‘ğí—Şƒ‰ƒWƒI‚Å‹à—˜‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚© */
+    /** é‡‘åˆ©é¸æŠç¨®é¡ãƒ©ã‚¸ã‚ªã§é‡‘åˆ©ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹ */
     private boolean isKinri;
 
-    /** ‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰º‚Ì€–Ú–¼ */
+    /** å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã®é …ç›®å */
     private String attributeChangeItemName;
 
-    /** ‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰ºƒtƒ‰ƒO */
+    /** å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹ãƒ•ãƒ©ã‚° */
     private boolean isAttributeChange;
 
-    /** “o˜^Ï‚İƒtƒ‰ƒO */
+    /** ç™»éŒ²æ¸ˆã¿ãƒ•ãƒ©ã‚° */
     private boolean isRegisted;
 
-    /** ‘I‘ğ‰Â”\€–ÚƒŠƒXƒg */
+    /** é¸æŠå¯èƒ½é …ç›®ãƒªã‚¹ãƒˆ */
     private List<LoanItemListModel> selectableItemList;
 
-    /** ì¬€–ÚƒŠƒXƒgƒZƒbƒg—pƒŠƒXƒg */
+    /** ä½œæˆé …ç›®ãƒªã‚¹ãƒˆã‚»ãƒƒãƒˆç”¨ãƒªã‚¹ãƒˆ */
     private List tempMakingItemList;
 
-    /** ì¬€–ÚƒŠƒXƒg */
+    /** ä½œæˆé …ç›®ãƒªã‚¹ãƒˆ */
     private List<LoanItemListModel> makingItemList;
 
-    // ’Ç‰Á€–Ú‚©‚ğ”»’f‚·‚éˆ×‚Ì‰Šúî•ñ‘Ş”ğ—p
+    // è¿½åŠ é …ç›®ã‹ã‚’åˆ¤æ–­ã™ã‚‹ç‚ºã®åˆæœŸæƒ…å ±é€€é¿ç”¨
     private List<LoanItemListModel> makingItemListBackUpInit;
 
-    // İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒIƒ{ƒ^ƒ“Ø‘Ö‚Ì‘Ş”ğ—p
-    /** ì¬€–ÚƒŠƒXƒgƒoƒbƒNƒAƒbƒv(ƒ[ƒ“) */
+    // è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³åˆ‡æ›¿æ™‚ã®é€€é¿ç”¨
+    /** ä½œæˆé …ç›®ãƒªã‚¹ãƒˆãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—(ãƒ­ãƒ¼ãƒ³) */
     private List<LoanItemListModel> makingItemListBackUpLoan;
 
-    /** ì¬€–ÚƒŠƒXƒgƒoƒbƒNƒAƒbƒv(‚»‚Ì‘¼ƒT[ƒrƒX) */
+    /** ä½œæˆé …ç›®ãƒªã‚¹ãƒˆãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—(ãã®ä»–ã‚µãƒ¼ãƒ“ã‚¹) */
     private List<LoanItemListModel> makingItemListBackUpOthers;
 
-    /** ƒ[ƒ“İŒv‰æ–Ê‹¤’Êî•ñƒ‚ƒfƒ‹ */
+    /** ãƒ­ãƒ¼ãƒ³è¨­è¨ˆç”»é¢å…±é€šæƒ…å ±ãƒ¢ãƒ‡ãƒ« */
     private LoanFinancingPlanningInfoModel loanInfo;
 
-    /** ‘I‘ğƒ[ƒ“‚Ì“o˜^“úi”r‘¼§Œä—pj */
+    /** é¸æŠãƒ­ãƒ¼ãƒ³ã®ç™»éŒ²æ—¥æ™‚ï¼ˆæ’ä»–åˆ¶å¾¡ç”¨ï¼‰ */
     private String selectedLoanRegistDay;
 
-    // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
-    /** —˜—p–¾×o—Íƒ‰ƒWƒI‚Å—L‚è‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚© */
+    // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
+    /** åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªã§æœ‰ã‚Šã‚’é¸æŠã—ã¦ã„ã‚‹ã‹ */
     private boolean isRiyouMeisaiOut;
 
-    /** —˜—p–¾×o—Í(—L‚èor–³‚µ) */
+    /** åˆ©ç”¨æ˜ç´°å‡ºåŠ›(æœ‰ã‚Šorç„¡ã—) */
     private String riyouMeisaiOut;
 
-    /** ˆÓvŠm”F(—L‚èor–³‚µ) */
+    /** æ„æ€ç¢ºèª(æœ‰ã‚Šorç„¡ã—) */
     private String isiKakunin;
 
-    /** —˜—p–¾×•\¦•¶Œ¾ */
+    /** åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ */
     private String riyouMeisaiHyojiMongon;
 
-    /** ‰üsio—Íj */
+    /** æ”¹è¡Œï¼ˆå‡ºåŠ›ï¼‰ */
     private static final String KAIGYO  = "\r\n";
 
-    /** —˜—p–¾×•\¦•¶Œ¾‚ÌÅ‘ås” */
+    /** åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®æœ€å¤§è¡Œæ•° */
     private static final int MAX_ROW_RIYOU_MEISAI_HYOJI_MONGON = 5;
 
-    /** —˜—p–¾×•\¦•¶Œ¾‚Ì‚Ps‚ÌÅ‘å•¶š”i‘SŠpj */
+    /** åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°ï¼ˆå…¨è§’ï¼‰ */
     private static final int MAX_MOJISU_ONE_ROW_MEISAI_HYOJI_MONGON = 40;
 
-    /** ó•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚ÌÅ‘ås” */
+    /** å—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã®æœ€å¤§è¡Œæ•° */
     private static final int MAX_ROW_UKETUKE_FOOTER_HYOJI_MONGON = 10;
 
-    /** ó•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚Ì‚Ps‚ÌÅ‘å•¶š”i‘SŠpj */
+    /** å—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã®ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°ï¼ˆå…¨è§’ï¼‰ */
     private static final int MAX_MOJISU_ONE_ROW_UKETUKE_FOOTER_HYOJI_MONGON = 75;
 
-    /** —˜—p–¾×o—Í(—L‚èor–³‚µ) ‰Šú•\¦ */
+    /** åˆ©ç”¨æ˜ç´°å‡ºåŠ›(æœ‰ã‚Šorç„¡ã—) åˆæœŸè¡¨ç¤ºæ™‚ */
     private String initRiyouMeisaiOut;
-    // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+    // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
 
-    /** ‹à—˜¬”•”‚ÌÅ‘åƒoƒCƒg” */
+    /** é‡‘åˆ©å°æ•°éƒ¨ã®æœ€å¤§ãƒã‚¤ãƒˆæ•° */
     private static final int MAX_BYTE_INTEREST_RATE_DECIMAL = 5;
 
     /**
-     * ‰Šúˆ—.<br/>
-     * @param obj ‰Šú‰»ƒpƒ‰ƒ[ƒ^
+     * åˆæœŸå‡¦ç†.<br/>
+     * @param obj åˆæœŸåŒ–ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
      */
     public void doInitialize(Object obj) {
-        // ƒpƒ‰ƒ[ƒ^‚Ìæ“¾
+        // ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å–å¾—
         LoanFinancingPlanningBeanParams params = (LoanFinancingPlanningBeanParams) obj;
 
         this.loanInfo = (LoanFinancingPlanningInfoModel) EmbStateHandler.get("LOAN_INFO_KEY", Scope.SESSION);
 
-        // ‰Šú‰»
+        // åˆæœŸåŒ–
         this.initializeFieldsCommon();
 
         if (params.isSelected()) {
@@ -214,22 +217,22 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
 
         this.initializeFieldsCommonCombo();
 
-        // İŒvó‹µuİŒv’†v‚©uƒT[ƒrƒX’†v‚Ì‚Æ‚«A‰Šú•\¦‚ÌItem‚ğƒoƒbƒNƒAƒbƒv
+        // è¨­è¨ˆçŠ¶æ³ã€Œè¨­è¨ˆä¸­ã€ã‹ã€Œã‚µãƒ¼ãƒ“ã‚¹ä¸­ã€ã®ã¨ãã€åˆæœŸè¡¨ç¤ºæ™‚ã®Itemã‚’ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—
         if (this.isDesigning() || this.isServing()) {
             this.makingItemListBackUpInit = (List<LoanItemListModel>) ObjectUtil.deepClone(this.makingItemList);
         }
     }
 
     /**
-     * “o˜^ˆ—.<br/>
-     * @return ƒ[ƒ“Šeí\İŒv(ƒT[ƒrƒX‘I‘ğ)˜_—–¼
+     * ç™»éŒ²å‡¦ç†.<br/>
+     * @return ãƒ­ãƒ¼ãƒ³å„ç¨®ç”³è¾¼è¨­è¨ˆ(ã‚µãƒ¼ãƒ“ã‚¹é¸æŠ)è«–ç†å
      */
     public String doRegist() {
 
-        // “ü—Íƒ`ƒFƒbƒN
+        // å…¥åŠ›ãƒã‚§ãƒƒã‚¯
         verifyRequiredOrDisplayConfirmation();
 
-        // “o˜^ˆ—
+        // ç™»éŒ²å‡¦ç†
         executeRegistServise();
 
         super.chainBeanAction("loanFinancingPlanningSelectServiceBean.doInitialize");
@@ -238,12 +241,12 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ƒT[ƒrƒXŠJnˆ—.<br/>
-     * @return ƒ[ƒ“ŠeíİŒv(İŒv)‰æ–Ê‚Ì˜_—–¼
+     * ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹å‡¦ç†.<br/>
+     * @return ãƒ­ãƒ¼ãƒ³å„ç¨®è¨­è¨ˆ(è¨­è¨ˆ)ç”»é¢ã®è«–ç†å
      */
     public String doStartService() {
 
-        // ƒT[ƒrƒXŠJnˆ—
+        // ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹å‡¦ç†
         executeStartService();
 
         this.designSituation = LoanFinancingPlanningConstants.DesignSituation.SERVING.code();
@@ -254,12 +257,12 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ƒT[ƒrƒXI—¹ˆ—.<br/>
-     * @return ƒ[ƒ“ŠeíİŒv(İŒv)‰æ–Ê‚Ì˜_—–¼
+     * ã‚µãƒ¼ãƒ“ã‚¹çµ‚äº†å‡¦ç†.<br/>
+     * @return ãƒ­ãƒ¼ãƒ³å„ç¨®è¨­è¨ˆ(è¨­è¨ˆ)ç”»é¢ã®è«–ç†å
      */
     public String doEndService() {
 
-        // ƒT[ƒrƒXŠJnˆ—
+        // ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹å‡¦ç†
         executeStartService();
 
         this.designSituation = LoanFinancingPlanningConstants.DesignSituation.SERVICE_END.code();
@@ -270,8 +273,8 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ‰æ–Ê‘JˆÚ(‰æ–ÊŠm”F).<br/>
-     * @return ƒ[ƒ“Šeí\İŒv(‰æ–ÊŠm”F)˜_—–¼
+     * ç”»é¢é·ç§»(ç”»é¢ç¢ºèª).<br/>
+     * @return ãƒ­ãƒ¼ãƒ³å„ç¨®ç”³è¾¼è¨­è¨ˆ(ç”»é¢ç¢ºèª)è«–ç†å
      */
     public String doTransferDisplayConfirmation() {
 
@@ -284,16 +287,16 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         params.setBook(this.book);
         params.setSheet(this.sheet);
 
-        super.chainBeanAction("loanFinancingPlanningDisplayConfirmationBean.doInitialize", params); // ‘JˆÚæ‰æ–Ê‚Ì‰Šúˆ—
+        super.chainBeanAction("loanFinancingPlanningDisplayConfirmationBean.doInitialize", params); // é·ç§»å…ˆç”»é¢ã®åˆæœŸå‡¦ç†
 
-        super.setBackwardViewId(EmbNavigationConstants.LOAN_FINANCING_PLANNING);  // ‘JˆÚæ‰æ–Ê‚Ì–ß‚éƒ{ƒ^ƒ“‰Ÿ‰º‚É•\¦‚·‚é‰æ–Ê
+        super.setBackwardViewId(EmbNavigationConstants.LOAN_FINANCING_PLANNING);  // é·ç§»å…ˆç”»é¢ã®æˆ»ã‚‹ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã«è¡¨ç¤ºã™ã‚‹ç”»é¢
 
         return EmbNavigationConstants.LOAN_FINANCING_PLANNING_DISPLAY_CONFIRMATION;
     }
 
     /**
-     * ‰æ–Ê‘JˆÚ(€–Úİ’è(‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰º)).<br/>
-     * @return ƒ[ƒ“Šeí\İŒv(€–Úİ’è)˜_—–¼
+     * ç”»é¢é·ç§»(é …ç›®è¨­å®š(å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚)).<br/>
+     * @return ãƒ­ãƒ¼ãƒ³å„ç¨®ç”³è¾¼è¨­è¨ˆ(é …ç›®è¨­å®š)è«–ç†å
      */
     public String doTransferItemSettingAttributeChange() {
         LoanItemListModel model = (LoanItemListModel) super.getRequestManagedBean("makingItemRow");
@@ -301,39 +304,39 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         LoanFinancingPlanningItemSettingBeanParams params = new LoanFinancingPlanningItemSettingBeanParams();
         params.setLoanItemListModel((LoanItemListModel) ObjectUtil.deepClone(model));
 
-        super.chainBeanAction("loanFinancingPlanningItemSettingBean.doInitializeAttributeChange", params); // ‘JˆÚæ‰æ–Ê‚Ì‰Šúˆ—
+        super.chainBeanAction("loanFinancingPlanningItemSettingBean.doInitializeAttributeChange", params); // é·ç§»å…ˆç”»é¢ã®åˆæœŸå‡¦ç†
 
-        super.setBackwardViewId(EmbNavigationConstants.LOAN_FINANCING_PLANNING);  // ‘JˆÚæ‰æ–Ê‚Ì–ß‚éƒ{ƒ^ƒ“‰Ÿ‰º‚É•\¦‚·‚é‰æ–Ê
+        super.setBackwardViewId(EmbNavigationConstants.LOAN_FINANCING_PLANNING);  // é·ç§»å…ˆç”»é¢ã®æˆ»ã‚‹ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã«è¡¨ç¤ºã™ã‚‹ç”»é¢
 
         return EmbNavigationConstants.LOAN_FINANCING_PLANNING_ITEM_SETTING;
     }
 
     /**
-     * ‰æ–Ê‘JˆÚ(€–Úİ’è(€–Ú’Ç‰Áƒ{ƒ^ƒ“‰Ÿ‰º)).<br/>
-     * @return ƒ[ƒ“Šeí\İŒv(€–Úİ’è)˜_—–¼
+     * ç”»é¢é·ç§»(é …ç›®è¨­å®š(é …ç›®è¿½åŠ ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚)).<br/>
+     * @return ãƒ­ãƒ¼ãƒ³å„ç¨®ç”³è¾¼è¨­è¨ˆ(é …ç›®è¨­å®š)è«–ç†å
      */
     public String doTransferItemSettingNew() {
 
-        super.chainBeanAction("loanFinancingPlanningItemSettingBean.doInitializeItemAdd"); // ‘JˆÚæ‰æ–Ê‚Ì‰Šúˆ—
+        super.chainBeanAction("loanFinancingPlanningItemSettingBean.doInitializeItemAdd"); // é·ç§»å…ˆç”»é¢ã®åˆæœŸå‡¦ç†
 
-        super.setBackwardViewId(EmbNavigationConstants.LOAN_FINANCING_PLANNING);  // ‘JˆÚæ‰æ–Ê‚Ì–ß‚éƒ{ƒ^ƒ“‰Ÿ‰º‚É•\¦‚·‚é‰æ–Ê
+        super.setBackwardViewId(EmbNavigationConstants.LOAN_FINANCING_PLANNING);  // é·ç§»å…ˆç”»é¢ã®æˆ»ã‚‹ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã«è¡¨ç¤ºã™ã‚‹ç”»é¢
 
         return EmbNavigationConstants.LOAN_FINANCING_PLANNING_ITEM_SETTING;
     }
 
     /**
-     * €–Úİ’è‰æ–Ê‚É‚Ä“o˜^‚³‚ê‚½€–Ú‚ğƒZƒbƒg.<br/>
-     * @param obj €–Úİ’è‰æ–Ê‚©‚ç“n‚³‚ê‚½ƒpƒ‰ƒ[ƒ^
+     * é …ç›®è¨­å®šç”»é¢ã«ã¦ç™»éŒ²ã•ã‚ŒãŸé …ç›®ã‚’ã‚»ãƒƒãƒˆ.<br/>
+     * @param obj é …ç›®è¨­å®šç”»é¢ã‹ã‚‰æ¸¡ã•ã‚ŒãŸãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
      */
     public void doSetItemSettingData(Object obj) {
-        // ƒpƒ‰ƒ[ƒ^‚Ìæ“¾
+        // ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å–å¾—
         LoanFinancingPlanningBeanParams params = (LoanFinancingPlanningBeanParams) obj;
 
         LoanItemListModel loanItemModel = params.getLoanItemListModel();
         this.attributeChangeItemName = params.getAttributeChangeItemName();
         this.isAttributeChange = StringUtils.isNotEmpty(this.attributeChangeItemName);
 
-        // ƒpƒ‰ƒ[ƒ^ƒ`ƒFƒbƒN
+        // ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒã‚§ãƒƒã‚¯
         verifyParametersFromItemSetting(loanItemModel);
 
         if (this.isAttributeChange) {
@@ -347,25 +350,25 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         this.attributeChangeItemName = "";
         this.isAttributeChange = false;
         addFacesMessage(EmbMessageIdConstants.INFO_LOAN_NOT_REGISTED_ITEM);
-        // ƒT[ƒrƒXŠJnƒ{ƒ^ƒ“‚ğg—p•s‰Â‚É‚·‚é
+        // ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹ãƒœã‚¿ãƒ³ã‚’ä½¿ç”¨ä¸å¯ã«ã™ã‚‹
         this.isRegisted = false;
 
-        // “o˜^ŒãA‰æ–Ê‚ğ‰Šúí‘Ô‚Å•\¦
+        // ç™»éŒ²å¾Œã€ç”»é¢ã‚’åˆæœŸå¸¸æ…‹ã§è¡¨ç¤º
         super.chainBeanAction("loanFinancingPlanningItemSettingBean.doInitializeItemAdd");
     }
 
     /**
-     * •\¦ˆæØ‘Öˆ—(İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒIƒ{ƒ^ƒ“‚Ì”ñ“¯Šúˆ—)
-     * @param selectedCode ‘I‘ğ’†‚ÌİŒvƒT[ƒrƒXí—Şƒ‰ƒWƒIƒ{ƒ^ƒ“‚ÌƒR[ƒh’l
-     * @param selectedAcceptKbn ‘I‘ğ’†‚Ìó•t‹æ•ªƒ‰ƒWƒIƒ{ƒ^ƒ“‚ÌƒR[ƒh’l
-     * @param selectedIsiKakunin ‘I‘ğ’†‚ÌˆÓvŠm”Fƒ‰ƒWƒIƒ{ƒ^ƒ“‚ÌƒR[ƒh’l
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * è¡¨ç¤ºåŸŸåˆ‡æ›¿å‡¦ç†(è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®éåŒæœŸå‡¦ç†)
+     * @param selectedCode é¸æŠä¸­ã®è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®ã‚³ãƒ¼ãƒ‰å€¤
+     * @param selectedAcceptKbn é¸æŠä¸­ã®å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®ã‚³ãƒ¼ãƒ‰å€¤
+     * @param selectedIsiKakunin é¸æŠä¸­ã®æ„æ€ç¢ºèªãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®ã‚³ãƒ¼ãƒ‰å€¤
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
-// 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+// 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
 //  public synchronized String[] doSelectServiceDivisionAsync(String selectedCode) {
     public synchronized String[] doSelectServiceDivisionAsync(
             String selectedCode, String selectedAcceptKbn, String selectedIsiKakunin) {
-// 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+// 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
         SfaArgumentUtil.assertNotEmpty(selectedCode);
 
         String[] html = null;
@@ -376,33 +379,33 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         if (this.isLoan) {
             this.makingItemListBackUpOthers = (List<LoanItemListModel>) ObjectUtil.deepClone(this.makingItemList);
             this.makingItemList = this.makingItemListBackUpLoan;
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
-            //ˆÓvŠm”F‚ğ•Û‚·‚é
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
+            //æ„æ€ç¢ºèªã‚’ä¿æŒã™ã‚‹
             this.isiKakunin = selectedIsiKakunin;
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
         } else {
             this.makingItemListBackUpLoan = (List<LoanItemListModel>) ObjectUtil.deepClone(this.makingItemList);
             this.makingItemList = this.makingItemListBackUpOthers;
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
 
-            //ˆÓvŠm”F‚ğu—L‚èv‚Éİ’è‚·‚é
+            //æ„æ€ç¢ºèªã‚’ã€Œæœ‰ã‚Šã€ã«è¨­å®šã™ã‚‹
             this.isiKakunin = LoanFinancingPlanningConstants.ISI_KAKUNIN_ARI;
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
         }
 
         try {
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
             //html = new String[2];
             html = new String[3];
-           // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+           // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
 
             FacesUtil.restoreView(super.getFacesContext(), EmbNavigationConstants.LOAN_FINANCING_PLANNING);
 
             html[0] = FacesUtil.getHtml(super.getFacesContext(), "loanFinancingPlanning:hosyouGaisyaGroup");
             html[1] = FacesUtil.getHtml(super.getFacesContext(), "loanFinancingPlanning:sakuseiItemListGroup");
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
             html[2] = FacesUtil.getHtml(super.getFacesContext(), "loanFinancingPlanning:isiKakuninGrid");
-            // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+            // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
 
         } catch (Throwable t){
             super.handleAsynchronousException(t);
@@ -411,9 +414,9 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * •\¦ˆæØ‘Öˆ—(BookƒRƒ“ƒ{‚Ì”ñ“¯Šúˆ—)
-     * @param selectedCode ‘I‘ğ’†‚ÌBookƒRƒ“ƒ{‚Ì’l
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * è¡¨ç¤ºåŸŸåˆ‡æ›¿å‡¦ç†(Bookã‚³ãƒ³ãƒœã®éåŒæœŸå‡¦ç†)
+     * @param selectedCode é¸æŠä¸­ã®Bookã‚³ãƒ³ãƒœã®å€¤
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doSelectSheetComboAsync(String selectedCode) {
 
@@ -437,9 +440,9 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * •\¦ˆæØ‘Öˆ—(‹à—˜‘I‘ğƒ‰ƒWƒIƒ{ƒ^ƒ“‚Ì”ñ“¯Šúˆ—)
-     * @param selectedCode ‘I‘ğ’†‚Ì‹à—˜‘I‘ğƒ‰ƒWƒIƒ{ƒ^ƒ“‚ÌƒR[ƒh’l
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * è¡¨ç¤ºåŸŸåˆ‡æ›¿å‡¦ç†(é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®éåŒæœŸå‡¦ç†)
+     * @param selectedCode é¸æŠä¸­ã®é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®ã‚³ãƒ¼ãƒ‰å€¤
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doSelectKinriDivisionAsync(String selectedCode) {
         SfaArgumentUtil.assertNotEmpty(selectedCode);
@@ -460,25 +463,25 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * •\¦ˆæØ‘Öˆ—(‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{”ñ“¯Šúˆ—)
-     * @param selectedServiceId ‘I‘ğ’†‚Ì‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‚ÌƒR[ƒh’l
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * è¡¨ç¤ºåŸŸåˆ‡æ›¿å‡¦ç†(é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœéåŒæœŸå‡¦ç†)
+     * @param selectedServiceId é¸æŠä¸­ã®é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœã®ã‚³ãƒ¼ãƒ‰å€¤
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doSelectListDivisionAsync(String selectedServiceId) {
         String html = "";
         this.selectedService = selectedServiceId;
 
         try {
-            // “ü—Íƒ`ƒFƒbƒN
+            // å…¥åŠ›ãƒã‚§ãƒƒã‚¯
             verifyRequiredSeletableService(this.selectedService);
 
             List <LoanSekkeiCommonModel> sekkeiList = this.loanInfo.getLoanSekkeiV();
 
             for (LoanSekkeiCommonModel sekkeiModel : sekkeiList) {
                 if (this.selectedService.equals(sekkeiModel.getLoanTableName())) {
-                    this.selectedId = sekkeiModel.getServiceSyubetsu();             // ƒT[ƒrƒXí•Ê
-                    this.selectedName = this.selectedService;                      // –¼Ì
-                    this.selectedDesignSituation = sekkeiModel.getSekkeiJyokyo();   // İŒvó‹µ
+                    this.selectedId = sekkeiModel.getServiceSyubetsu();             // ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥
+                    this.selectedName = this.selectedService;                      // åç§°
+                    this.selectedDesignSituation = sekkeiModel.getSekkeiJyokyo();   // è¨­è¨ˆçŠ¶æ³
                     break;
                 }
             }
@@ -493,19 +496,19 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ‘I‘ğs‚ğ•Êƒe[ƒuƒ‹‚Ö’Ç‰Á.(”ñ“¯Šúˆ—)
-     * @param asyncSelectedId ‘I‘ğs‚ÌID
-     * @return ‘‚«Š·‚¦‚éHTML
+     * é¸æŠè¡Œã‚’åˆ¥ãƒ†ãƒ¼ãƒ–ãƒ«ã¸è¿½åŠ .(éåŒæœŸå‡¦ç†)
+     * @param asyncSelectedId é¸æŠè¡Œã®ID
+     * @return æ›¸ãæ›ãˆã‚‹HTML
      */
     public synchronized String[] doAddSelectionTableAsync(String asyncSelectedId) {
-        // ˆø”‚Ì‹óƒ`ƒFƒbƒN
+        // å¼•æ•°ã®ç©ºãƒã‚§ãƒƒã‚¯
         SfaArgumentUtil.assertNotEmpty(asyncSelectedId);
         String[] html = null;
 
         try {
             html = new String[2];
 
-            // ‘I‘ğs‚ÌID‚æ‚è©ˆê——‚©‚ç‘ÎÛ‚Ìˆê——‚Öƒf[ƒ^‚ğˆÚ“®
+            // é¸æŠè¡Œã®IDã‚ˆã‚Šè‡ªä¸€è¦§ã‹ã‚‰å¯¾è±¡ã®ä¸€è¦§ã¸ãƒ‡ãƒ¼ã‚¿ã‚’ç§»å‹•
             for(LoanItemListModel selectableRow : selectableItemList) {
                 if(selectableRow.getItemName().equals(asyncSelectedId)) {
                     if (isPossibleAdd(selectableRow)) {
@@ -527,12 +530,12 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ‘I‘ğs‚ğíœ.(”ñ“¯Šúˆ—)
-     * @param asyncSelectedId ‘I‘ğs‚ÌID
-     * @return ‘‚«Š·‚¦‚éHTML
+     * é¸æŠè¡Œã‚’å‰Šé™¤.(éåŒæœŸå‡¦ç†)
+     * @param asyncSelectedId é¸æŠè¡Œã®ID
+     * @return æ›¸ãæ›ãˆã‚‹HTML
      */
     public synchronized String[] doDeleteSelectionTableAsync(String asyncSelectedId) {
-        // ˆø”‚Ì‹óƒ`ƒFƒbƒN
+        // å¼•æ•°ã®ç©ºãƒã‚§ãƒƒã‚¯
         SfaArgumentUtil.assertNotEmpty(asyncSelectedId);
 
         String[] html = null;
@@ -540,7 +543,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         try {
             html = new String[2];
 
-            // ‘I‘ğs‚ÌID‚æ‚è©ˆê——‚©‚ç‘ÎÛ‚Ìˆê——‚Öƒf[ƒ^‚ğˆÚ“®
+            // é¸æŠè¡Œã®IDã‚ˆã‚Šè‡ªä¸€è¦§ã‹ã‚‰å¯¾è±¡ã®ä¸€è¦§ã¸ãƒ‡ãƒ¼ã‚¿ã‚’ç§»å‹•
             for(LoanItemListModel makingRow : makingItemList) {
                 if(makingRow.getItemName().equals(asyncSelectedId)) {
                     if (isPossibleDelete(makingRow)) {
@@ -562,18 +565,18 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ˆê——‚Ì‘I‘ğs‚ğã‚ÖˆÚ“®(”ñ“¯Šúˆ—).<br/>
-     * @param asyncSelectedId ‘I‘ğs‚ÌID
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * ä¸€è¦§ã®é¸æŠè¡Œã‚’ä¸Šã¸ç§»å‹•(éåŒæœŸå‡¦ç†).<br/>
+     * @param asyncSelectedId é¸æŠè¡Œã®ID
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doUpAsync(String asyncSelectedId) {
-        // ˆø”‚Ì‹óƒ`ƒFƒbƒN
+        // å¼•æ•°ã®ç©ºãƒã‚§ãƒƒã‚¯
         SfaArgumentUtil.assertNotEmpty(asyncSelectedId);
 
         String html = "";
 
         try {
-            // ˆê——‚Ì‘I‘ğs‚Ìã‰º‚ğ“ü‚ê‘Ö‚¦‚é
+            // ä¸€è¦§ã®é¸æŠè¡Œã®ä¸Šä¸‹ã‚’å…¥ã‚Œæ›¿ãˆã‚‹
             for(LoanItemListModel makingListModel : this.makingItemList) {
                 if(makingListModel.getItemName().equals(asyncSelectedId)) {
                     int rowNumber = this.makingItemList.indexOf(makingListModel);
@@ -594,16 +597,16 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ˆê——‚Ì‘I‘ğs‚Ì‰ºˆÚ“®(”ñ“¯Šúˆ—).<br/>
-     * @param asyncSelectedId ‘I‘ğs‚ÌID
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * ä¸€è¦§ã®é¸æŠè¡Œã®ä¸‹ç§»å‹•(éåŒæœŸå‡¦ç†).<br/>
+     * @param asyncSelectedId é¸æŠè¡Œã®ID
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doDownAsync(String asyncSelectedId) {
         SfaArgumentUtil.assertNotEmpty(asyncSelectedId);
 
         String html = "";
         try {
-            // ˆê——‚Ì‘I‘ğs‚Ìã‰º‚ğ“ü‚ê‘Ö‚¦‚é
+            // ä¸€è¦§ã®é¸æŠè¡Œã®ä¸Šä¸‹ã‚’å…¥ã‚Œæ›¿ãˆã‚‹
             for(LoanItemListModel makingListModel : this.makingItemList) {
                 if(makingListModel.getItemName().equals(asyncSelectedId)) {
                     int rowNumber = this.makingItemList.indexOf(makingListModel);
@@ -623,8 +626,8 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * “ü—Í‚É•ÏX‚ª‚ ‚Á‚½‚Æ‚«AƒT[ƒrƒXŠJnƒ{ƒ^ƒ“‚ğg—p•s‰Â‚Æ‚·‚é.<br/>
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * å…¥åŠ›ã«å¤‰æ›´ãŒã‚ã£ãŸã¨ãã€ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹ãƒœã‚¿ãƒ³ã‚’ä½¿ç”¨ä¸å¯ã¨ã™ã‚‹.<br/>
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doSelectServiceStartButtonDivisionAsync() {
         String html = "";
@@ -641,7 +644,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
 
 
     /**
-     * ‹¤’ÊŠeƒtƒB[ƒ‹ƒh‚Ì‰Šú‰».<br/>
+     * å…±é€šå„ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®åˆæœŸåŒ–.<br/>
      */
     private void initializeFieldsCommon() {
         this.selectGuarantyCompanyList  = null;
@@ -662,16 +665,16 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         this.attributeChangeItemName = "";
         this.isAttributeChange = false;
         this.selectedLoanRegistDay = "";
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
         this.riyouMeisaiOut = LoanFinancingPlanningConstants.RIYOUMEISAI_OUT_ARI;
         this.isiKakunin = LoanFinancingPlanningConstants.ISI_KAKUNIN_ARI;
         this.riyouMeisaiHyojiMongon = "";
         this.initRiyouMeisaiOut = "";
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
     }
 
     /**
-     * ‹¤’ÊŠeƒtƒB[ƒ‹ƒh‚Ì‰Šú‰»(ƒRƒ“ƒ{).<br/>
+     * å…±é€šå„ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®åˆæœŸåŒ–(ã‚³ãƒ³ãƒœ).<br/>
      */
     private void initializeFieldsCommonCombo() {
         this.selectGuarantyCompanyList = FacesUtil.toSelectItems(this.loanInfo.getLoanHosyoV(), "code", "name", true);
@@ -688,7 +691,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ƒV[ƒgƒŠƒXƒg‚ğİ’è.<br/>
+     * ã‚·ãƒ¼ãƒˆãƒªã‚¹ãƒˆã‚’è¨­å®š.<br/>
      */
     private void setSheetList() {
         if (StringUtils.isEmpty(this.book)) {
@@ -704,7 +707,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ŠeƒtƒB[ƒ‹ƒh‚Ì‰Šú‰»(V‹KˆÈŠO).<br/>
+     * å„ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®åˆæœŸåŒ–(æ–°è¦ä»¥å¤–).<br/>
      */
     private void initializeFieldsSelected(LoanFinancingPlanningBeanParams params) {
 
@@ -721,15 +724,15 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
 
         String[] interestRateList = params.getLoanSekkeiModel().getKinri().split("\\.");
         this.interestRateInt = interestRateList[0];
-        // ®”•”¬”•”‹¤‚É’l‚ª—L‚éê‡
+        // æ•´æ•°éƒ¨å°æ•°éƒ¨å…±ã«å€¤ãŒæœ‰ã‚‹å ´åˆ
         if (interestRateList.length == 2) {
-            // ‰Eƒ[ƒ–„‚ß‚ğs‚Á‚½’l‚ğƒZƒbƒg
+            // å³ã‚¼ãƒ­åŸ‹ã‚ã‚’è¡Œã£ãŸå€¤ã‚’ã‚»ãƒƒãƒˆ
             this.interestRateDecimal = StringFormat.fillZeroToRight(
                     interestRateList[1], MAX_BYTE_INTEREST_RATE_DECIMAL);
-        // ®”•”‚É’l‚ª–³‚¢ê‡(”NŠÔ•ÔÏŠz‘I‘ğ)
+        // æ•´æ•°éƒ¨ã«å€¤ãŒç„¡ã„å ´åˆ(å¹´é–“è¿”æ¸ˆé¡é¸æŠ)
         } else if (this.interestRateInt.equals("")){
             this.interestRateDecimal = "";
-        // ®”•”‚É’l‚ª—L‚èA¬”•”‚É’l‚ª–³‚¢ê‡(“o˜^’l‚ª®”‚Ìƒf[ƒ^)
+        // æ•´æ•°éƒ¨ã«å€¤ãŒæœ‰ã‚Šã€å°æ•°éƒ¨ã«å€¤ãŒç„¡ã„å ´åˆ(ç™»éŒ²å€¤ãŒæ•´æ•°ã®ãƒ‡ãƒ¼ã‚¿)
         } else {
             this.interestRateDecimal = "00000";
         }
@@ -742,19 +745,19 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         }
         this.selectedLoanRegistDay = params.getLoanSekkeiModel().getRegistDay();
         this.makingItemList = params.getMakingItemList();
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
-        //—˜—p–¾×o—Í
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
+        //åˆ©ç”¨æ˜ç´°å‡ºåŠ›
         this.riyouMeisaiOut = params.getLoanSekkeiModel().getFieldDetailOutput();
 
-        // ‰æ–Ê‰Šú•\¦‚Ì—˜—p–¾×o—Í‚Ì‘I‘ğ’l‚ğ•Û
+        // ç”»é¢åˆæœŸè¡¨ç¤ºæ™‚ã®åˆ©ç”¨æ˜ç´°å‡ºåŠ›ã®é¸æŠå€¤ã‚’ä¿æŒ
         this.initRiyouMeisaiOut = params.getLoanSekkeiModel().getFieldDetailOutput();
 
         this.isRiyouMeisaiOut = this.riyouMeisaiOut.equals(LoanFinancingPlanningConstants.RIYOUMEISAI_OUT_NASI);
 
-        //ˆÓvŠm”F
+        //æ„æ€ç¢ºèª
         this.isiKakunin = params.getLoanSekkeiModel().getFieldRepetitionUse();
 
-        //—˜—p–¾×•\¦•¶Œ¾
+        //åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€
         Vector<LoanShowTextModel> tmpFieldDetailTextV = params.getLoanSekkeiModel().getFieldDetailTextV();
         StringBuffer tmpMeisaiMongon = new StringBuffer();
         LoanShowTextModel tmpModel = null;
@@ -772,11 +775,11 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         this.riyouMeisaiHyojiMongon = tmpMeisaiMongon.toString();
         tmpModel = null;
 
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
     }
 
     /**
-     * ŠeƒtƒB[ƒ‹ƒh‚Ì‰Šú‰»(V‹K).<br/>
+     * å„ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®åˆæœŸåŒ–(æ–°è¦).<br/>
      */
     private void initializeFieldsNew(LoanFinancingPlanningBeanParams params) {
         this.id = params.getId();
@@ -787,29 +790,29 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         this.isSelected = false;
         this.isLoan = true;
         this.isKinri = true;
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
         this.isRiyouMeisaiOut = false;
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
         this.makingItemList = setItemListFromFixModel(this.tempMakingItemList);
         this.makingItemListBackUpInit = new ArrayList<LoanItemListModel>();
         this.makingItemListBackUpLoan = new ArrayList<LoanItemListModel>();
         this.makingItemListBackUpOthers = new ArrayList<LoanItemListModel>();
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
-        //—˜—p–¾×o—Í
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
+        //åˆ©ç”¨æ˜ç´°å‡ºåŠ›
         this.riyouMeisaiOut = LoanFinancingPlanningConstants.RIYOUMEISAI_OUT_ARI;
 
-        //ˆÓvŠm”F
+        //æ„æ€ç¢ºèª
         this.isiKakunin = LoanFinancingPlanningConstants.ISI_KAKUNIN_ARI;
 
-        //—˜—p–¾×•\¦•¶Œ¾
+        //åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€
         this.riyouMeisaiHyojiMongon = "";
 
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
     }
 
 
     /**
-     * Šù‘¶ƒT[ƒrƒX‘I‘ğEİ’èˆ—.<br/>
+     * æ—¢å­˜ã‚µãƒ¼ãƒ“ã‚¹é¸æŠãƒ»è¨­å®šå‡¦ç†.<br/>
      */
     private void executeSelectableServiceListDetail() {
 
@@ -825,7 +828,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         request.setLoanSekkeiM(model);
 
 
-        // TB‹Æ–±‹¤’Ê—v‹î•ñ‚ğƒZƒbƒg
+        // TBæ¥­å‹™å…±é€šè¦æ±‚æƒ…å ±ã‚’ã‚»ãƒƒãƒˆ
         request.setTbGyomuCommonReqM(LoanFinancingUtils.getTbGyoumuCommonRequest());
 
         LoanExistSelectResponseModel response =
@@ -838,7 +841,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * “o˜^ˆ—.<br/>
+     * ç™»éŒ²å‡¦ç†.<br/>
      */
     private void executeRegistServise() {
         LoanRegistRequestModel  request = new LoanRegistRequestModel();
@@ -853,10 +856,10 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
 
         request.setLoanSetM(setModel);
 
-        // TB‹Æ–±‹¤’Ê—v‹î•ñ‚ğƒZƒbƒg
+        // TBæ¥­å‹™å…±é€šè¦æ±‚æƒ…å ±ã‚’ã‚»ãƒƒãƒˆ
         request.setTbGyomuCommonReqM(LoanFinancingUtils.getTbGyoumuCommonRequest());
 
-        // 2010.06.25 ÂX‘Î‰@V‹K“o˜^ƒtƒ‰ƒO‚ğ’Ç‰Á
+        // 2010.06.25 é’æ£®å¯¾å¿œã€€æ–°è¦ç™»éŒ²ãƒ•ãƒ©ã‚°ã‚’è¿½åŠ 
         if (!this.isSelected) {
             request.setNewRegist("1");
         }
@@ -874,8 +877,8 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ƒ[ƒ“İŒvƒpƒ‰ƒ[ƒ^‚ğæ“¾.<br/>
-     * @return ƒ[ƒ“İŒvƒpƒ‰ƒ[ƒ^
+     * ãƒ­ãƒ¼ãƒ³è¨­è¨ˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’å–å¾—.<br/>
+     * @return ãƒ­ãƒ¼ãƒ³è¨­è¨ˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
      */
     private LoanSekkeiCommonModel getParamLoanSekkeiModel() {
         LoanSekkeiCommonModel sekkeiModel = new LoanSekkeiCommonModel();
@@ -900,14 +903,14 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         }
 
         sekkeiModel.setRegistDay(this.selectedLoanRegistDay);
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
-        //ó•t‹æ•ª
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
+        //å—ä»˜åŒºåˆ†
         sekkeiModel.setFieldReceiptDivision("0");
-        //—˜—p–¾×o—Í
+        //åˆ©ç”¨æ˜ç´°å‡ºåŠ›
         sekkeiModel.setFieldDetailOutput(this.riyouMeisaiOut);
-        //ˆÓvŠm”F
+        //æ„æ€ç¢ºèª
         sekkeiModel.setFieldRepetitionUse(this.isiKakunin);
-        //—˜—p–¾×•\¦•¶Œ¾i‰üsƒR[ƒh‚Åsplit‚µ‚ÄModel‚ÉŠi”[‚·‚éj
+        //åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼ˆæ”¹è¡Œã‚³ãƒ¼ãƒ‰ã§splitã—ã¦Modelã«æ ¼ç´ã™ã‚‹ï¼‰
         if (!"".equals(this.riyouMeisaiHyojiMongon)) {
             Vector<LoanShowTextModel> fieldDetailTextV = sekkeiModel.getFieldDetailTextV();
 
@@ -918,13 +921,13 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
                     , MAX_MOJISU_ONE_ROW_MEISAI_HYOJI_MONGON);
 
         }
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
 
         return sekkeiModel;
     }
 
     /**
-     * ƒT[ƒrƒXŠJn/I—¹ˆ—.<br/>
+     * ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹/çµ‚äº†å‡¦ç†.<br/>
      */
     private void executeStartService() {
         LoanStartRequestModel request = new LoanStartRequestModel();
@@ -944,7 +947,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         }
         model.setBook(this.book);
         model.setSheet(this.sheet);
-        // NSD ADD START 2013/04/05 ƒT[ƒrƒXŠJnEI—¹‚É‚É‚æ‚é”r‘¼§Œä’Ç‰Á
+        // NSD ADD START 2013/04/05 ã‚µãƒ¼ãƒ“ã‚¹é–‹å§‹ãƒ»çµ‚äº†æ™‚ã«æ™‚åˆ»ã«ã‚ˆã‚‹æ’ä»–åˆ¶å¾¡è¿½åŠ 
         model.setRegistDay(this.selectedLoanRegistDay);
         // NSD ADD END   2013/04/05
         if (this.isDesigning()) {
@@ -952,12 +955,12 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         } else {
             model.setSekkeiJyokyo(LoanFinancingPlanningConstants.DesignSituation.SERVICE_END.code());
         }
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
         model.setFieldDetailOutput(this.initRiyouMeisaiOut);
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
         request.setLoanSekkeiM(model);
 
-        // TB‹Æ–±‹¤’Ê—v‹î•ñ‚ğƒZƒbƒg
+        // TBæ¥­å‹™å…±é€šè¦æ±‚æƒ…å ±ã‚’ã‚»ãƒƒãƒˆ
         request.setTbGyomuCommonReqM(LoanFinancingUtils.getTbGyoumuCommonRequest());
 
         super.invoke(ServiceProxyType.DOMAIN_SERVICE,
@@ -965,61 +968,61 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * “ü—Íƒ`ƒFƒbƒN(“o˜^Eo—Íƒ{ƒ^ƒ“‰Ÿ‰º‚Ì•K{ƒ`ƒFƒbƒN).<br/>
+     * å…¥åŠ›ãƒã‚§ãƒƒã‚¯(ç™»éŒ²ãƒ»å‡ºåŠ›ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã®å¿…é ˆãƒã‚§ãƒƒã‚¯).<br/>
      */
     private void verifyRequiredOrDisplayConfirmation() {
         if (this.isLoan) {
-            // \‚Ì•ÛØ‰ïĞ‚Ì•K{ƒ`ƒFƒbƒN
+            // ç”³è¾¼æ™‚ã®ä¿è¨¼ä¼šç¤¾ã®å¿…é ˆãƒã‚§ãƒƒã‚¯
             SfaValidationUtil.validateRequiredSelect(this.guarantyCompany, ItemName.get("moushikomijinohosyougaisya"));
         }
-        // Book‚Ì•K{ƒ`ƒFƒbƒN
+        // Bookã®å¿…é ˆãƒã‚§ãƒƒã‚¯
         SfaValidationUtil.validateRequiredSelect(this.book, ItemName.get("book"));
-        // Sheet‚Ì•K{ƒ`ƒFƒbƒN
+        // Sheetã®å¿…é ˆãƒã‚§ãƒƒã‚¯
         SfaValidationUtil.validateRequiredSelect(this.sheet, ItemName.get("sheet"));
-        // ‹à—˜‘I‘ğ‚Ì•K{ƒ`ƒFƒbƒN
+        // é‡‘åˆ©é¸æŠã®å¿…é ˆãƒã‚§ãƒƒã‚¯
         SfaValidationUtil.validateRequiredSelect(this.interestRateSelectRadioValue, ItemName.get("kinrisentaku"));
         if (this.isLoan) {
             if (this.isKinri) {
-                // ‹à—˜i®”•”j‚Ì•K{ƒ`ƒFƒbƒN
+                // é‡‘åˆ©ï¼ˆæ•´æ•°éƒ¨ï¼‰ã®å¿…é ˆãƒã‚§ãƒƒã‚¯
                 SfaValidationUtil.validateRequiredInput(
                         this.interestRateInt, ItemName.get("kinri") + ItemName.get("seisuubu"));
-                // ‹à—˜i¬”•”j‚Ì•K{ƒ`ƒFƒbƒN
+                // é‡‘åˆ©ï¼ˆå°æ•°éƒ¨ï¼‰ã®å¿…é ˆãƒã‚§ãƒƒã‚¯
                 SfaValidationUtil.validateRequiredInput(
                         this.interestRateDecimal, ItemName.get("kinri") + ItemName.get("syousuubu"));
-                // ƒGƒ‰[‚ª‚ ‚éê‡AƒƒbƒZ[ƒW‚ğo—Í
+                // ã‚¨ãƒ©ãƒ¼ãŒã‚ã‚‹å ´åˆã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºåŠ›
                 super.handleValidatorException();
-                // ‹à—˜‚ª0‚æ‚è‚à‘å‚«‚¢’l‚Å‚ ‚é‚©‚Ìƒ`ƒFƒbƒN
+                // é‡‘åˆ©ãŒ0ã‚ˆã‚Šã‚‚å¤§ãã„å€¤ã§ã‚ã‚‹ã‹ã®ãƒã‚§ãƒƒã‚¯
                 SfaValidationUtil.validateNumberExcludeMinimum(
                         this.interestRateInt + "." + this.interestRateDecimal, "0", ItemName.get("kinri"));
             } else {
-                // ”NŠÔ•ÔÏŠz‚Ì•K{ƒ`ƒFƒbƒN
+                // å¹´é–“è¿”æ¸ˆé¡ã®å¿…é ˆãƒã‚§ãƒƒã‚¯
                 SfaValidationUtil.validateRequiredInput(this.yearRepayment, ItemName.get("nenkanhensaigaku"));
-                // ”NŠÔ•ÔÏŠz‚ª0‚æ‚è‚à‘å‚«‚¢’l‚Å‚ ‚é‚©‚Ìƒ`ƒFƒbƒN
+                // å¹´é–“è¿”æ¸ˆé¡ãŒ0ã‚ˆã‚Šã‚‚å¤§ãã„å€¤ã§ã‚ã‚‹ã‹ã®ãƒã‚§ãƒƒã‚¯
                 SfaValidationUtil.validateNumberExcludeMinimum(
                         this.yearRepayment, "0", ItemName.get("nenkanhensaigaku"));
             }
         }
 
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
-        // ‰üsƒR[ƒh‚ğŠÜ‚ß‚È‚¢—˜—p–¾×•\¦•¶Œ¾
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
+        // æ”¹è¡Œã‚³ãƒ¼ãƒ‰ã‚’å«ã‚ãªã„åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€
         String tmpAllMeisaiMongon = this.riyouMeisaiHyojiMongon.replace(KAIGYO, "");
 
-        // —˜—p–¾×•\¦•¶Œ¾‚ğ‚c‚a‚ÉŠi”[‚·‚éÛ‚Ì‡Œvs”
+        // åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã‚’ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹éš›ã®åˆè¨ˆè¡Œæ•°
         int riyouMeisaiTotalRowCnt;
 
-        // ó•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚ğ‚c‚a‚ÉŠi”[‚·‚éÛ‚Ì‡Œvs”
+        // å—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã‚’ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹éš›ã®åˆè¨ˆè¡Œæ•°
         int footerTotalRowCnt;
 
-        // —˜—p–¾×•\¦•¶Œ¾‚Ì‘SŠpƒ`ƒFƒbƒN
+        // åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®å…¨è§’ãƒã‚§ãƒƒã‚¯
         SfaValidationUtil.validateDoubleByte(tmpAllMeisaiMongon, ItemName.get("riyoumeisaihyoujimongon"));
 
-        // —˜—p–¾×•\¦•¶Œ¾‚ÌƒoƒCƒg”ãŒÀƒ`ƒFƒbƒNi400ƒoƒCƒg‚ğ’´‚¦‚é‚ÆƒGƒ‰[j
+        // åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®ãƒã‚¤ãƒˆæ•°ä¸Šé™ãƒã‚§ãƒƒã‚¯ï¼ˆ400ãƒã‚¤ãƒˆã‚’è¶…ãˆã‚‹ã¨ã‚¨ãƒ©ãƒ¼ï¼‰
         if(StringUtils.isNotBlank(this.riyouMeisaiHyojiMongon)){
             SfaValidationUtil.validateByteMaximum(
                     tmpAllMeisaiMongon, 400, ItemName.get("riyoumeisaihyoujimongon"));
         }
 
-        // —˜—p–¾×•\¦•¶Œ¾‚Ì‘s”‚ğƒ`ƒFƒbƒN
+        // åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®ç·è¡Œæ•°ã‚’ãƒã‚§ãƒƒã‚¯
         riyouMeisaiTotalRowCnt = calcTotalRowCount(
                 this.riyouMeisaiHyojiMongon, MAX_MOJISU_ONE_ROW_MEISAI_HYOJI_MONGON);
 
@@ -1027,28 +1030,28 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
             addFacesMessage(EmbMessageIdConstants.USE_DETAIL_OVER_TEXT);
         }
 
-        // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+        // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
 
-        // ƒGƒ‰[‚ª‚ ‚éê‡AƒƒbƒZ[ƒW‚ğo—Í
+        // ã‚¨ãƒ©ãƒ¼ãŒã‚ã‚‹å ´åˆã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºåŠ›
         super.handleValidatorException();
 
-        // ì¬€–Úˆê——‚Ì•K{ƒ`ƒFƒbƒN
+        // ä½œæˆé …ç›®ä¸€è¦§ã®å¿…é ˆãƒã‚§ãƒƒã‚¯
         if (this.makingItemList.size() <= 0) {
             throw new SfaException(MessageIdConstants.VALIDATION_REQUIRED_INPUT, ItemName.get("sakuseikoumoku"));
         }
     }
 
     /**
-     * €–Úİ’è‰æ–Ê‚©‚ç‘JˆÚ‚Ìƒpƒ‰ƒ[ƒ^ƒ`ƒFƒbƒN.<br/>
-     * @param paramItem €–Úİ’è‰æ–Ê‚©‚ç“n‚³‚ê‚½ƒpƒ‰ƒ[ƒ^
+     * é …ç›®è¨­å®šç”»é¢ã‹ã‚‰é·ç§»æ™‚ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒã‚§ãƒƒã‚¯.<br/>
+     * @param paramItem é …ç›®è¨­å®šç”»é¢ã‹ã‚‰æ¸¡ã•ã‚ŒãŸãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
      */
     private void verifyParametersFromItemSetting(LoanItemListModel paramItem) {
-        // ƒGƒNƒZƒ‹‚ÌƒZƒ‹w’èE€–Ú–¼EƒJƒ‰ƒ€–¼–¼d•¡AÅ‘å€–Ú”ƒI[ƒo[ƒ`ƒFƒbƒN
+        // ã‚¨ã‚¯ã‚»ãƒ«ã®ã‚»ãƒ«æŒ‡å®šãƒ»é …ç›®åãƒ»ã‚«ãƒ©ãƒ ååé‡è¤‡ã€æœ€å¤§é …ç›®æ•°ã‚ªãƒ¼ãƒãƒ¼ãƒã‚§ãƒƒã‚¯
         isPossibleAdd(paramItem);
 
         if (this.isAttributeChange) {
 
-            // ƒT[ƒrƒX’†ƒ[ƒ“‚Ì’·‚³ƒ`ƒFƒbƒN(‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰º‚Ì‚İ)
+            // ã‚µãƒ¼ãƒ“ã‚¹ä¸­ãƒ­ãƒ¼ãƒ³ã®é•·ã•ãƒã‚§ãƒƒã‚¯(å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã®ã¿)
             if (isServing()
                     && !isItemAdded(this.attributeChangeItemName)) {
                 for (LoanItemListModel makingItem : this.makingItemList) {
@@ -1062,29 +1065,29 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ì¬€–Úˆê——‚É’Ç‰Á‰Â”\‚©‚ğ”»’f.<br/>
-     * @param selectableRow ‘I‘ğs
-     * @throws ƒGƒNƒZƒ‹‚ÌƒZƒ‹w’èd•¡ƒGƒ‰[
-     * @throws €–Ú–¼d•¡ƒGƒ‰[
-     * @throws ƒJƒ‰ƒ€–¼d•¡ƒGƒ‰[
-     * @throws Å‘å€–Ú”ƒI[ƒo[ƒGƒ‰[
-     * @return ‘I‘ğs‚ğ•Êƒe[ƒuƒ‹‚Ö’Ç‰Á‰Â”\‚©
+     * ä½œæˆé …ç›®ä¸€è¦§ã«è¿½åŠ å¯èƒ½ã‹ã‚’åˆ¤æ–­.<br/>
+     * @param selectableRow é¸æŠè¡Œ
+     * @throws ã‚¨ã‚¯ã‚»ãƒ«ã®ã‚»ãƒ«æŒ‡å®šé‡è¤‡ã‚¨ãƒ©ãƒ¼
+     * @throws é …ç›®åé‡è¤‡ã‚¨ãƒ©ãƒ¼
+     * @throws ã‚«ãƒ©ãƒ åé‡è¤‡ã‚¨ãƒ©ãƒ¼
+     * @throws æœ€å¤§é …ç›®æ•°ã‚ªãƒ¼ãƒãƒ¼ã‚¨ãƒ©ãƒ¼
+     * @return é¸æŠè¡Œã‚’åˆ¥ãƒ†ãƒ¼ãƒ–ãƒ«ã¸è¿½åŠ å¯èƒ½ã‹
      */
     private boolean isPossibleAdd(LoanItemListModel selectableRow) {
         for(LoanItemListModel makingRow : this.makingItemList) {
-            // ‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰ºŒã‚Ìê‡Aƒ{ƒ^ƒ“‰Ÿ‰º‘O‚Æ“¯‚¶“à—e‚Å‚àOK
+            // å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹å¾Œã®å ´åˆã€ãƒœã‚¿ãƒ³æŠ¼ä¸‹å‰ã¨åŒã˜å†…å®¹ã§ã‚‚OK
             if (!StringUtils.equals(this.attributeChangeItemName, makingRow.getItemName())) {
-                // ƒGƒNƒZƒ‹‚ÌƒZƒ‹w’èd•¡ƒ`ƒFƒbƒN
+                // ã‚¨ã‚¯ã‚»ãƒ«ã®ã‚»ãƒ«æŒ‡å®šé‡è¤‡ãƒã‚§ãƒƒã‚¯
                 if (selectableRow.getCellPosition().equals(makingRow.getCellPosition())) {
                     throw new SfaException(
                             EmbMessageIdConstants.WARNING_LOAN_OVERLAPS_LIST_ITEM, ItemName.get("excelnocellshitei"));
                 }
-                // €–Ú–¼‚Ìd•¡ƒ`ƒFƒbƒN
+                // é …ç›®åã®é‡è¤‡ãƒã‚§ãƒƒã‚¯
                 if (selectableRow.getItemName().equals(makingRow.getItemName())) {
                     throw new SfaException(
                             EmbMessageIdConstants.WARNING_LOAN_OVERLAPS_LIST_ITEM, ItemName.get("koumokumei"));
                 }
-                // ƒJƒ‰ƒ€–¼‚Ìd•¡ƒ`ƒFƒbƒN
+                // ã‚«ãƒ©ãƒ åã®é‡è¤‡ãƒã‚§ãƒƒã‚¯
                 if (selectableRow.getColumnName().equals(makingRow.getColumnName())) {
                     throw new SfaException(
                             EmbMessageIdConstants.WARNING_LOAN_OVERLAPS_LIST_ITEM, ItemName.get("columnmei"));
@@ -1092,7 +1095,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
             }
         }
 
-        // Å‘å€–Ú”ƒI[ƒo[ƒ`ƒFƒbƒN(‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰ºŒãˆÈŠO‚Ì‚Æ‚«)
+        // æœ€å¤§é …ç›®æ•°ã‚ªãƒ¼ãƒãƒ¼ãƒã‚§ãƒƒã‚¯(å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹å¾Œä»¥å¤–ã®ã¨ã)
         if (!isAttributeChange
                 && makingItemList.size() == LoanFinancingPlanningConstants.MAX_LOAN_ITEM) {
             throw new SfaException(EmbMessageIdConstants.WARNING_LOAN_OVER_MAX);
@@ -1101,30 +1104,30 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ì¬€–Úˆê——‚É’Ç‰Á‚·‚é‚Æ‚«‰c‹Æ“XƒŠƒXƒg‚ğİ’è.<br/>
-     * @param selectableRow ì¬‰Â”\€–Úˆê——‚Ìˆês
+     * ä½œæˆé …ç›®ä¸€è¦§ã«è¿½åŠ ã™ã‚‹ã¨ãå–¶æ¥­åº—ãƒªã‚¹ãƒˆã‚’è¨­å®š.<br/>
+     * @param selectableRow ä½œæˆå¯èƒ½é …ç›®ä¸€è¦§ã®ä¸€è¡Œ
      */
     private void setSelectShopList(LoanItemListModel listItem) {
-        // ‘®«‚ª‰c‹Æ“X‘I‘ğŒ^‚Ì‚Æ‚«
+        // å±æ€§ãŒå–¶æ¥­åº—é¸æŠå‹ã®ã¨ã
         if (listItem.getAttributeId().equals(LoanFinancingPlanningConstants.ATTRIBUTE_SELECT_SHOP)) {
             listItem.setLoanSelectionV(this.loanInfo.getLinkItemV());
         }
     }
 
     /**
-     * ì¬€–Úˆê——‚©‚çíœ‰Â”\‚©‚ğ”»’f.<br/>
-     * @param makingRow ‘I‘ğs‚ÌID
-     * @throws íœ•s‰Â”\ƒGƒ‰[(ŒÅ’è€–Ú)
-     * @throws íœ•s‰Â”\ƒGƒ‰[(ƒT[ƒrƒX’†)
-     * @return ì¬€–Úˆê——‚©‚çíœ‰Â”\‚©
+     * ä½œæˆé …ç›®ä¸€è¦§ã‹ã‚‰å‰Šé™¤å¯èƒ½ã‹ã‚’åˆ¤æ–­.<br/>
+     * @param makingRow é¸æŠè¡Œã®ID
+     * @throws å‰Šé™¤ä¸å¯èƒ½ã‚¨ãƒ©ãƒ¼(å›ºå®šé …ç›®)
+     * @throws å‰Šé™¤ä¸å¯èƒ½ã‚¨ãƒ©ãƒ¼(ã‚µãƒ¼ãƒ“ã‚¹ä¸­)
+     * @return ä½œæˆé …ç›®ä¸€è¦§ã‹ã‚‰å‰Šé™¤å¯èƒ½ã‹
      */
     private boolean isPossibleDelete(LoanItemListModel makingRow) {
-        // ŒÅ’è€–Úƒ`ƒFƒbƒN
+        // å›ºå®šé …ç›®ãƒã‚§ãƒƒã‚¯
         if (this.isLoan
                 && LoanFinancingPlanningConstants.FIX_ITEM.equals(makingRow.getFixFlag())) {
             throw new SfaException(EmbMessageIdConstants.WARNING_LOAN_DELETE_IMPOSSIBLE);
         }
-        // İŒvó‹µ‚ªƒT[ƒrƒX’†‚ÅA‚©‚Â“o˜^Ï‚İ‚Ì€–Ú‚Ííœ•s‰Â)
+        // è¨­è¨ˆçŠ¶æ³ãŒã‚µãƒ¼ãƒ“ã‚¹ä¸­ã§ã€ã‹ã¤ç™»éŒ²æ¸ˆã¿ã®é …ç›®ã¯å‰Šé™¤ä¸å¯)
         if (isServing() && !isItemAdded(makingRow.getItemName())) {
             throw new SfaException(EmbMessageIdConstants.WARNING_LOAN_DELETE_SERVING);
         }
@@ -1132,21 +1135,21 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * “ü—Íƒ`ƒFƒbƒN(‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{).<br/>
+     * å…¥åŠ›ãƒã‚§ãƒƒã‚¯(é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœ).<br/>
      */
     private void verifyRequiredSeletableService(String selectedServiceTableName) {
-        // ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‚Ì“ü—Íƒ`ƒFƒbƒN
+        // é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœã®å…¥åŠ›ãƒã‚§ãƒƒã‚¯
         SfaValidationUtil.validateRequiredSelect(selectedServiceTableName, ItemName.get("sentakukanoukoumoku"));
 
-        // ƒGƒ‰[‚ª‚ ‚éê‡AƒƒbƒZ[ƒW‚ğo—Í
+        // ã‚¨ãƒ©ãƒ¼ãŒã‚ã‚‹å ´åˆã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºåŠ›
         super.handleValidatorException();
     }
 
     /**
-     * ¬”“_‚ğ•t‰Á‚µ‚½’l‚ğ•Ô‹p.<br/>
-     * @param intValue ®”•”‚Ì’l
-     * @param decimalValue ¬”•”‚Ì’l
-     * @return ¬”“_‚ğ•t‰Á‚µ‚½’l
+     * å°æ•°ç‚¹ã‚’ä»˜åŠ ã—ãŸå€¤ã‚’è¿”å´.<br/>
+     * @param intValue æ•´æ•°éƒ¨ã®å€¤
+     * @param decimalValue å°æ•°éƒ¨ã®å€¤
+     * @return å°æ•°ç‚¹ã‚’ä»˜åŠ ã—ãŸå€¤
      */
     private String addDecimalPoint(String intValue, String decimalValue) {
         if (StringUtils.equals(intValue, "") && StringUtils.equals(decimalValue, "")) {
@@ -1159,9 +1162,9 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ƒŠƒXƒg“à‚Ìs‚ÌˆÊ’u‚ğ“ü‚ê‘Ö‚¦.<br/>
-     * @param forwardIndex ‘O•ûƒCƒ“ƒfƒbƒNƒX
-     * @param followingIndex Œã•ûƒCƒ“ƒfƒbƒNƒX
+     * ãƒªã‚¹ãƒˆå†…ã®è¡Œã®ä½ç½®ã‚’å…¥ã‚Œæ›¿ãˆ.<br/>
+     * @param forwardIndex å‰æ–¹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+     * @param followingIndex å¾Œæ–¹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
      */
     private void replacePosition(int forwardIndex, int followingIndex) {
         LoanItemListModel tempSelectItemList1 = this.makingItemList.get(forwardIndex);
@@ -1172,7 +1175,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ƒ[ƒ“ŒÅ’è€–Úƒ‚ƒfƒ‹‚©‚çì¬€–ÚƒŠƒXƒg‚ğİ’è.<br/>
+     * ãƒ­ãƒ¼ãƒ³å›ºå®šé …ç›®ãƒ¢ãƒ‡ãƒ«ã‹ã‚‰ä½œæˆé …ç›®ãƒªã‚¹ãƒˆã‚’è¨­å®š.<br/>
      */
     private List <LoanItemListModel> setItemListFromFixModel(List<LoanItemListModel> tempList) {
 
@@ -1203,9 +1206,9 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * “o˜^‚·‚é’l‚ğİ’è.<br/>
-     * ì¬€–ÚƒŠƒXƒg‚©‚çƒ[ƒ“€–Úİ’è.<br/>
-     * @param itemList ƒ[ƒ“€–Ú
+     * ç™»éŒ²ã™ã‚‹å€¤ã‚’è¨­å®š.<br/>
+     * ä½œæˆé …ç›®ãƒªã‚¹ãƒˆã‹ã‚‰ãƒ­ãƒ¼ãƒ³é …ç›®è¨­å®š.<br/>
+     * @param itemList ãƒ­ãƒ¼ãƒ³é …ç›®
      */
     private void setItemModelFromItemList(Vector itemList) {
 
@@ -1255,9 +1258,9 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-     * ‘ÎÛ€–Ú‚ªA’Ç‰Á‚³‚ê‚½€–Ú‚©“o˜^Ï‚İ‚Ì€–Ú‚©‚ğ•Ô‹p.<br/>
-     * @param targetItemName ƒ`ƒFƒbƒN‘ÎÛ€–Ú‚Ì€–Ú–¼
-     * @return ’Ç‰Á‚³‚ê‚½€–Ú‚©“o˜^Ï‚İ‚Ì€–Ú‚©
+     * å¯¾è±¡é …ç›®ãŒã€è¿½åŠ ã•ã‚ŒãŸé …ç›®ã‹ç™»éŒ²æ¸ˆã¿ã®é …ç›®ã‹ã‚’è¿”å´.<br/>
+     * @param targetItemName ãƒã‚§ãƒƒã‚¯å¯¾è±¡é …ç›®ã®é …ç›®å
+     * @return è¿½åŠ ã•ã‚ŒãŸé …ç›®ã‹ç™»éŒ²æ¸ˆã¿ã®é …ç›®ã‹
      */
     private boolean isItemAdded(String targetItemName) {
         for (LoanItemListModel backUpItem : this.makingItemListBackUpInit) {
@@ -1270,8 +1273,8 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
 
 
     /**
-     * ‘®«•ÏXƒ{ƒ^ƒ“‰Ÿ‰ºA€–Úİ’è‰æ–Ê‚É‚Ä“o˜^‚³‚ê‚½€–Ú‚ğƒZƒbƒg.<br/>
-     * @param loanItemModel €–Úİ’è‰æ–Ê‚©‚ç“n‚³‚ê‚½ƒpƒ‰ƒ[ƒ^(€–Ú)
+     * å±æ€§å¤‰æ›´ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã€é …ç›®è¨­å®šç”»é¢ã«ã¦ç™»éŒ²ã•ã‚ŒãŸé …ç›®ã‚’ã‚»ãƒƒãƒˆ.<br/>
+     * @param loanItemModel é …ç›®è¨­å®šç”»é¢ã‹ã‚‰æ¸¡ã•ã‚ŒãŸãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿(é …ç›®)
      */
     private void setItemSettigDataAttributeChange(LoanItemListModel loanItemModel) {
         for (LoanItemListModel itemRow : this.makingItemList) {
@@ -1290,7 +1293,7 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
                 itemRow.setAttributeId(loanItemModel.getAttributeId());
                 itemRow.setFixFlag(loanItemModel.getFixFlag());
                 itemRow.setLoanSelectionV(loanItemModel.getLoanSelectionV());
-                // NSD ADD START 2013/09/30 IDƒŒƒ“ƒOƒX‚ğƒZƒbƒg K.Takahashi
+                // NSD ADD START 2013/09/30 IDãƒ¬ãƒ³ã‚°ã‚¹ã‚’ã‚»ãƒƒãƒˆ K.Takahashi
                 itemRow.setIdLength(loanItemModel.getIdLength());
                 // NSD ADD END   2013/09/30
                 LoanFinancingUtils.getKoumokuSekkeiJyoukyou(itemRow, itemRow.getDefaultDivision()
@@ -1300,11 +1303,11 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         }
     }
 
-// 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+// 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
     /**
-     * •\¦ˆæØ‘Öˆ—(—˜—p–¾×o—Íƒ‰ƒWƒIƒ{ƒ^ƒ“‚Ì”ñ“¯Šúˆ—)
-     * @param selectedCode ‘I‘ğ’†‚Ì—˜—p–¾×o—Íƒ‰ƒWƒIƒ{ƒ^ƒ“‚ÌƒR[ƒh’l
-     * @return ”ñ“¯Šú‚Å‘‚«Š·‚¦‚éƒGƒŠƒA‚ÌHTML
+     * è¡¨ç¤ºåŸŸåˆ‡æ›¿å‡¦ç†(åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®éåŒæœŸå‡¦ç†)
+     * @param selectedCode é¸æŠä¸­ã®åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®ã‚³ãƒ¼ãƒ‰å€¤
+     * @return éåŒæœŸã§æ›¸ãæ›ãˆã‚‹ã‚¨ãƒªã‚¢ã®HTML
      */
     public synchronized String doSelectRiyouMeisaiDivisionAsync(String selectedCode) {
         SfaArgumentUtil.assertNotEmpty(selectedCode);
@@ -1324,36 +1327,36 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
         return html;
     }
     /**
-     * —˜—p–¾×•\¦•¶Œ¾Có•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚É‚Â‚¢‚ÄA‚c‚a‚ÉŠi”[‚·‚é‚Ì‡Œvs”‚ğ‹‚ß‚éD<br/>
-     * @param mongon —˜—p–¾×•\¦•¶Œ¾C‚Ü‚½‚Íó•t•[ƒtƒbƒ^[•\¦•¶Œ¾
-     * @param oneRowMaxMojisu ‚Ps‚ÌÅ‘å•¶š”
-     * @return —˜—p–¾×•\¦•¶Œ¾Có•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚ğ‚c‚a‚ÉŠi”[‚·‚é‚Ì‡Œvs”
+     * åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼Œå—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã«ã¤ã„ã¦ã€ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹æ™‚ã®åˆè¨ˆè¡Œæ•°ã‚’æ±‚ã‚ã‚‹ï¼<br/>
+     * @param mongon åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼Œã¾ãŸã¯å—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€
+     * @param oneRowMaxMojisu ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°
+     * @return åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼Œå—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã‚’ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹æ™‚ã®åˆè¨ˆè¡Œæ•°
      */
     private static int calcTotalRowCount(String mongon, int oneRowMaxMojisu) {
-        //ƒd—lƒƒ‚i2010/03/24“_j„
-        //—˜—p–¾×•\¦•¶Œ¾Có•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚ÍA•¶š—ñ‚Ps‚É‚Â‚«A‚c‚a‚É‚PƒŒƒR[ƒhì¬‚·‚éB
-        //ƒ†[ƒU‚ª‚c‚a‚Ìs‚ÌƒoƒCƒg”ˆÈã‚Ì•¶š”‚ğ‚Ps‚É“ü—Í‚µ‚½ê‡A‰üs‚µ‚Ä‚Qs‚Æ‚µ‚Äˆµ‚¤B
+        //ï¼œä»•æ§˜ãƒ¡ãƒ¢ï¼ˆ2010/03/24æ™‚ç‚¹ï¼‰ï¼
+        //åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼Œå—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã¯ã€æ–‡å­—åˆ—ï¼‘è¡Œã«ã¤ãã€ï¼¤ï¼¢ã«ï¼‘ãƒ¬ã‚³ãƒ¼ãƒ‰ä½œæˆã™ã‚‹ã€‚
+        //ãƒ¦ãƒ¼ã‚¶ãŒï¼¤ï¼¢ã®è¡Œã®ãƒã‚¤ãƒˆæ•°ä»¥ä¸Šã®æ–‡å­—æ•°ã‚’ï¼‘è¡Œã«å…¥åŠ›ã—ãŸå ´åˆã€æ”¹è¡Œã—ã¦ï¼’è¡Œã¨ã—ã¦æ‰±ã†ã€‚
         //
-        //¦—á‚¦‚ÎAƒ†[ƒU‚ª—˜—p–¾×•\¦•¶Œ¾‚Ì‚Ps‚É‚U‚O•¶š“ü—Í‚µ‚½ê‡A
-        //u‚S‚O•¶š‚Ìsv‚Æu‚Q‚O•¶š‚Ìsv‚ÌŒv‚Qs‚Æ‚µ‚Äˆµ‚¤‚±‚Æ‚É‚È‚éB
-        //‚±‚Ìƒƒ\ƒbƒh‚Å‚ÍAŠe•\¦•¶Œ¾‚Æ‚Ps‚ÌÅ‘å•¶š”‚©‚çA‚c‚a‚ÉŠi”[‚·‚é‚±‚Æ‚É‚È‚é‡Œvs”‚ğ‹‚ß‚éB
+        //â€»ä¾‹ãˆã°ã€ãƒ¦ãƒ¼ã‚¶ãŒåˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®ï¼‘è¡Œã«ï¼–ï¼æ–‡å­—å…¥åŠ›ã—ãŸå ´åˆã€
+        //ã€Œï¼”ï¼æ–‡å­—ã®è¡Œã€ã¨ã€Œï¼’ï¼æ–‡å­—ã®è¡Œã€ã®è¨ˆï¼’è¡Œã¨ã—ã¦æ‰±ã†ã“ã¨ã«ãªã‚‹ã€‚
+        //ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã§ã¯ã€å„è¡¨ç¤ºæ–‡è¨€ã¨ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°ã‹ã‚‰ã€ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹ã“ã¨ã«ãªã‚‹åˆè¨ˆè¡Œæ•°ã‚’æ±‚ã‚ã‚‹ã€‚
         //
-        //—˜—p–¾×•\¦•¶Œ¾‚Ì‚Ps‚ÌÅ‘å•¶š”F‘SŠp‚S‚O•¶š
-        //ó•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚Ì‚Ps‚ÌÅ‘å•¶š”F‘SŠp‚V‚T•¶š
+        //åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã®ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°ï¼šå…¨è§’ï¼”ï¼æ–‡å­—
+        //å—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã®ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°ï¼šå…¨è§’ï¼—ï¼•æ–‡å­—
 
 
-        //‚c‚a‚ÉŠi”[‚·‚é‚±‚Æ‚É‚È‚é‡Œvs”
+        //ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹ã“ã¨ã«ãªã‚‹åˆè¨ˆè¡Œæ•°
         int totalRowCnt = 0;
 
-        //‚Ps‚²‚Æ‚Ì•\¦•¶Œ¾
+        //ï¼‘è¡Œã”ã¨ã®è¡¨ç¤ºæ–‡è¨€
         String[] mongonRows =  mongon.split(KAIGYO);
 
         for (String rowStr : mongonRows) {
             if ("".equals(rowStr)) {
-                //s‚ª‹ó”’i""j‚¾‚Á‚½ê‡A‚»‚ê‚à‚Ps‚Æ‚İ‚È‚·
+                //è¡ŒãŒç©ºç™½ï¼ˆ""ï¼‰ã ã£ãŸå ´åˆã€ãã‚Œã‚‚ï¼‘è¡Œã¨ã¿ãªã™
                 totalRowCnt++;
             } else {
-                //s”‚ğŒvZ‚·‚é
+                //è¡Œæ•°ã‚’è¨ˆç®—ã™ã‚‹
                 totalRowCnt += (int) Math.ceil((double) rowStr.length() / (double) oneRowMaxMojisu);
             }
         }
@@ -1362,11 +1365,11 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
     }
 
     /**
-    * —˜—p–¾×•\¦•¶Œ¾Có•t•[ƒtƒbƒ^[•\¦•¶Œ¾‚É‚Â‚¢‚ÄA‚c‚a‚ÉŠi”[‚·‚é‚½‚ß‚Ìƒ‚ƒfƒ‹‚ğì¬‚·‚éD<br/>
-    * @param vec ƒ‚ƒfƒ‹Ši”[—pVector
-    * @param loanTableName ƒ‚ƒfƒ‹‚ÉŠi”[‚·‚éƒ[ƒ“ƒe[ƒuƒ‹–¼
-    * @param mongon —˜—p–¾×•\¦•¶Œ¾C‚Ü‚½‚Íó•t•[ƒtƒbƒ^[•\¦•¶Œ¾
-    * @param oneRowMaxMojisu ‚Ps‚ÌÅ‘å•¶š”
+    * åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼Œå—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€ã«ã¤ã„ã¦ã€ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹æ™‚ãŸã‚ã®ãƒ¢ãƒ‡ãƒ«ã‚’ä½œæˆã™ã‚‹ï¼<br/>
+    * @param vec ãƒ¢ãƒ‡ãƒ«æ ¼ç´ç”¨Vector
+    * @param loanTableName ãƒ¢ãƒ‡ãƒ«ã«æ ¼ç´ã™ã‚‹ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å
+    * @param mongon åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ï¼Œã¾ãŸã¯å—ä»˜ç¥¨ãƒ•ãƒƒã‚¿ãƒ¼è¡¨ç¤ºæ–‡è¨€
+    * @param oneRowMaxMojisu ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°
     */
    private static void createLoanShowTextModel(
            Vector<LoanShowTextModel> vec
@@ -1374,39 +1377,39 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
            , String mongon
            , int oneRowMaxMojisu) {
 
-       //‰æ–Ê“ü—Í‚³‚ê‚½‚Ps‚²‚Æ‚Ì•\¦•¶Œ¾
+       //ç”»é¢å…¥åŠ›ã•ã‚ŒãŸï¼‘è¡Œã”ã¨ã®è¡¨ç¤ºæ–‡è¨€
        String[] mongonRows =  mongon.split(KAIGYO);
 
-       //‚c‚a‚ÉŠi”[‚·‚é‚Ps‚Ì•¶š—ñ
+       //ï¼¤ï¼¢ã«æ ¼ç´ã™ã‚‹ï¼‘è¡Œã®æ–‡å­—åˆ—
        String oneRowDbStr;
-       //ƒV[ƒPƒ“ƒX”Ô†i‚P‚©‚çn‚Ü‚éj
+       //ã‚·ãƒ¼ã‚±ãƒ³ã‚¹ç•ªå·ï¼ˆï¼‘ã‹ã‚‰å§‹ã¾ã‚‹ï¼‰
        int seqNo = 1;
 
-       //‚Ps‚Ì•¶š—ñ‚ğ‹æØ‚éisubstring‚·‚éj‰ñ”
+       //ï¼‘è¡Œã®æ–‡å­—åˆ—ã‚’åŒºåˆ‡ã‚‹ï¼ˆsubstringã™ã‚‹ï¼‰å›æ•°
        int substrCnt = 0;
-       //‚Ps‚Ì•¶š—ñ‚ğ‹æØ‚éŠJnEI—¹ˆÊ’u
+       //ï¼‘è¡Œã®æ–‡å­—åˆ—ã‚’åŒºåˆ‡ã‚‹é–‹å§‹ãƒ»çµ‚äº†ä½ç½®
        int substrStartPos = 0;
        int substrEndPos = 0;
 
        for (String mongonRowStr : mongonRows) {
 
            if ("".equals(mongonRowStr)) {
-               //‰æ–Ê“ü—Í‚³‚ê‚½‚Ps‚Ì•\¦•¶Œ¾‚ª‹ó”’•¶š‚Å‚ ‚éê‡Aƒ‚ƒfƒ‹‚ğì¬
+               //ç”»é¢å…¥åŠ›ã•ã‚ŒãŸï¼‘è¡Œã®è¡¨ç¤ºæ–‡è¨€ãŒç©ºç™½æ–‡å­—ã§ã‚ã‚‹å ´åˆã€ãƒ¢ãƒ‡ãƒ«ã‚’ä½œæˆ
 
                LoanShowTextModel model = new LoanShowTextModel();
-               //ƒ[ƒ“ƒe[ƒuƒ‹–¼
+               //ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å
                model.setFieldLoanTableName(loanTableName);
-               //ƒV[ƒPƒ“ƒX”Ô†
+               //ã‚·ãƒ¼ã‚±ãƒ³ã‚¹ç•ªå·
                model.setFieldSEQ(String.valueOf(seqNo++));
-               //‚Ps•ª‚Ì•¶Œ¾i‚±‚Ìê‡‚Í‹ó”’‚Æ‚È‚éj
+               //ï¼‘è¡Œåˆ†ã®æ–‡è¨€ï¼ˆã“ã®å ´åˆã¯ç©ºç™½ã¨ãªã‚‹ï¼‰
                model.setFieldText(mongonRowStr);
 
                vec.add(model);
                continue;
            }
 
-           //‰æ–Ê“ü—Í‚³‚ê‚½‚Ps‚Ì•\¦•¶Œ¾‚ª‹ó”’ˆÈŠOi•¶š”‚OˆÈŠOj‚Å‚ ‚éê‡A
-           //•\¦•¶Œ¾‚ğ‚Ps‚ÌÅ‘å•¶š”‚Å‹æØ‚Á‚Äƒ‚ƒfƒ‹‚ğì¬‚·‚é
+           //ç”»é¢å…¥åŠ›ã•ã‚ŒãŸï¼‘è¡Œã®è¡¨ç¤ºæ–‡è¨€ãŒç©ºç™½ä»¥å¤–ï¼ˆæ–‡å­—æ•°ï¼ä»¥å¤–ï¼‰ã§ã‚ã‚‹å ´åˆã€
+           //è¡¨ç¤ºæ–‡è¨€ã‚’ï¼‘è¡Œã®æœ€å¤§æ–‡å­—æ•°ã§åŒºåˆ‡ã£ã¦ãƒ¢ãƒ‡ãƒ«ã‚’ä½œæˆã™ã‚‹
            substrCnt = (int) Math.ceil((double) mongonRowStr.length() / (double) oneRowMaxMojisu);
 
            for (int i = 0; i < substrCnt; i++) {
@@ -1420,535 +1423,535 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
                }
 
                LoanShowTextModel model = new LoanShowTextModel();
-               //ƒ[ƒ“ƒe[ƒuƒ‹–¼
+               //ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å
                model.setFieldLoanTableName(loanTableName);
-               //ƒV[ƒPƒ“ƒX”Ô†
+               //ã‚·ãƒ¼ã‚±ãƒ³ã‚¹ç•ªå·
                model.setFieldSEQ(String.valueOf(seqNo++));
-               //‚Ps•ª‚Ì•¶Œ¾
+               //ï¼‘è¡Œåˆ†ã®æ–‡è¨€
                model.setFieldText(oneRowDbStr);
 
                vec.add(model);
            }
        }
    }
-// 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+// 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
     /**
-     * Id(ƒT[ƒrƒXí•Ê)æ“¾.<br />
-     * @return Id(ƒT[ƒrƒXí•Ê)
+     * Id(ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥)å–å¾—.<br />
+     * @return Id(ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥)
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Id(ƒT[ƒrƒXí•Ê)İ’è.<br />
-     * @param id Id(ƒT[ƒrƒXí•Ê)
+     * Id(ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥)è¨­å®š.<br />
+     * @param id Id(ã‚µãƒ¼ãƒ“ã‚¹ç¨®åˆ¥)
      */
     public void setId(String id) {
         this.id = id;
     }
 
     /**
-     * –¼Ì(ƒ[ƒ“ƒe[ƒuƒ‹–¼)æ“¾.<br />
-     * @return –¼Ì(ƒ[ƒ“ƒe[ƒuƒ‹–¼)
+     * åç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å)å–å¾—.<br />
+     * @return åç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å)
      */
     public String getName() {
         return name;
     }
 
     /**
-     * –¼Ì(ƒ[ƒ“ƒe[ƒuƒ‹–¼)İ’è.<br />
-     * @param name –¼Ì(ƒ[ƒ“ƒe[ƒuƒ‹–¼)
+     * åç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å)è¨­å®š.<br />
+     * @param name åç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«å)
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * —ªÌ(ƒ[ƒ“ƒe[ƒuƒ‹—ªÌ)æ“¾.<br />
-     * @return —ªÌ(ƒ[ƒ“ƒe[ƒuƒ‹—ªÌ)
+     * ç•¥ç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«ç•¥ç§°)å–å¾—.<br />
+     * @return ç•¥ç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«ç•¥ç§°)
      */
     public String getAbbreviation() {
         return abbreviation;
     }
 
     /**
-     * —ªÌ(ƒ[ƒ“ƒe[ƒuƒ‹—ªÌ)İ’è.<br />
-     * @param abbreviation —ªÌ(ƒ[ƒ“ƒe[ƒuƒ‹—ªÌ)
+     * ç•¥ç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«ç•¥ç§°)è¨­å®š.<br />
+     * @param abbreviation ç•¥ç§°(ãƒ­ãƒ¼ãƒ³ãƒ†ãƒ¼ãƒ–ãƒ«ç•¥ç§°)
      */
     public void setAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
     }
 
     /**
-     * ‘I‘ğƒ{ƒ^ƒ“‰Ÿ‰ºƒtƒ‰ƒOæ“¾.<br />
-     * @return ‘I‘ğƒ{ƒ^ƒ“‰Ÿ‰ºƒtƒ‰ƒO
+     * é¸æŠãƒœã‚¿ãƒ³æŠ¼ä¸‹ãƒ•ãƒ©ã‚°å–å¾—.<br />
+     * @return é¸æŠãƒœã‚¿ãƒ³æŠ¼ä¸‹ãƒ•ãƒ©ã‚°
      */
     public boolean isSelected() {
         return isSelected;
     }
 
     /**
-     * ‘I‘ğƒ{ƒ^ƒ“‰Ÿ‰ºƒtƒ‰ƒOİ’è.<br />
-     * @param isSelected ‘I‘ğƒ{ƒ^ƒ“‰Ÿ‰ºƒtƒ‰ƒO
+     * é¸æŠãƒœã‚¿ãƒ³æŠ¼ä¸‹ãƒ•ãƒ©ã‚°è¨­å®š.<br />
+     * @param isSelected é¸æŠãƒœã‚¿ãƒ³æŠ¼ä¸‹ãƒ•ãƒ©ã‚°
      */
     public void setIsSelected(boolean isSelected) {
         this.isSelected = isSelected;
     }
 
     /**
-     * İŒvƒT[ƒrƒXí—Şæ“¾.<br />
-     * @return İŒvƒT[ƒrƒXí—Ş
+     * è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡å–å¾—.<br />
+     * @return è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡
      */
     public String getDesignServiceKind() {
         return designServiceKind;
     }
 
     /**
-     * İŒvƒT[ƒrƒXí—Şİ’è.<br />
-     * @param designServiceKind İŒvƒT[ƒrƒXí—Ş
+     * è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡è¨­å®š.<br />
+     * @param designServiceKind è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡
      */
     public void setDesignServiceKind(String designServiceKind) {
         this.designServiceKind = designServiceKind;
     }
 
     /**
-     * İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI’l(ƒ[ƒ“ó•t)æ“¾.<br />
-     * @return İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI’l(ƒ[ƒ“ó•t)
+     * è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªå€¤(ãƒ­ãƒ¼ãƒ³å—ä»˜)å–å¾—.<br />
+     * @return è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªå€¤(ãƒ­ãƒ¼ãƒ³å—ä»˜)
      */
     public String getLoanuketsuke() {
         return LoanFinancingPlanningConstants.SERVICE_LOAN;
     }
     /**
-     * İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI’l(‘¼ƒT[ƒrƒX)æ“¾.<br />
-     * @return İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI’l(‘¼ƒT[ƒrƒX)
+     * è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªå€¤(ä»–ã‚µãƒ¼ãƒ“ã‚¹)å–å¾—.<br />
+     * @return è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªå€¤(ä»–ã‚µãƒ¼ãƒ“ã‚¹)
      */
     public String getHokaservice() {
         return LoanFinancingPlanningConstants.SERVICE_OTHERS;
     }
 
     /**
-     * İŒvó‹µæ“¾.<br />
-     * @return İŒvó‹µ
+     * è¨­è¨ˆçŠ¶æ³å–å¾—.<br />
+     * @return è¨­è¨ˆçŠ¶æ³
      */
     public String getSekkeiJyoukyou() {
         return designSituation;
     }
 
     /**
-     * İŒvó‹µİ’è.<br />
-     * @param situation İŒvó‹µ
+     * è¨­è¨ˆçŠ¶æ³è¨­å®š.<br />
+     * @param situation è¨­è¨ˆçŠ¶æ³
      */
     public void setSekkeiJyoukyou(String situation) {
         this.designSituation = situation;
     }
 
     /**
-     * ‹à—˜‘I‘ğæ“¾.<br />
-     * @return ‹à—˜‘I‘ğ
+     * é‡‘åˆ©é¸æŠå–å¾—.<br />
+     * @return é‡‘åˆ©é¸æŠ
      */
     public String getInterestRateSelectRadioValue() {
         return interestRateSelectRadioValue;
     }
 
     /**
-     * ‹à—˜‘I‘ğİ’è.<br />
-     * @param interestRateSelectRadioValue ‹à—˜‘I‘ğ
+     * é‡‘åˆ©é¸æŠè¨­å®š.<br />
+     * @param interestRateSelectRadioValue é‡‘åˆ©é¸æŠ
      */
     public void setInterestRateSelectRadioValue(String interestRateSelectRadioValue) {
         this.interestRateSelectRadioValue = interestRateSelectRadioValue;
     }
 
     /**
-     * ‹à—˜‘I‘ğƒ‰ƒWƒI’l(‹à—˜)æ“¾.<br />
-     * @return ‹à—˜‘I‘ğƒ‰ƒWƒI’l(‹à—˜)
+     * é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªå€¤(é‡‘åˆ©)å–å¾—.<br />
+     * @return é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªå€¤(é‡‘åˆ©)
      */
     public String getInterestRateValue() {
         return LoanFinancingPlanningConstants.INTEREST_RATE;
     }
 
     /**
-     * ‹à—˜‘I‘ğƒ‰ƒWƒI’l(”NŠÔ•ÔÏŠz)æ“¾.<br />
-     * @return ‹à—˜‘I‘ğƒ‰ƒWƒI’l(”NŠÔ•ÔÏŠz)
+     * é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªå€¤(å¹´é–“è¿”æ¸ˆé¡)å–å¾—.<br />
+     * @return é‡‘åˆ©é¸æŠãƒ©ã‚¸ã‚ªå€¤(å¹´é–“è¿”æ¸ˆé¡)
      */
     public String getYearRepaymentValue() {
         return LoanFinancingPlanningConstants.YEAR_REPAMENT;
     }
 
     /**
-     * ì¬€–ÚƒŠƒXƒgæ“¾.<br />
-     * @return ì¬€–ÚƒŠƒXƒg
+     * ä½œæˆé …ç›®ãƒªã‚¹ãƒˆå–å¾—.<br />
+     * @return ä½œæˆé …ç›®ãƒªã‚¹ãƒˆ
      */
     public List<LoanItemListModel> getMakingItemList() {
         return makingItemList;
     }
 
     /**
-     * ì¬€–ÚƒŠƒXƒgİ’è.<br />
-     * @param makingItemList ì¬€–ÚƒŠƒXƒg
+     * ä½œæˆé …ç›®ãƒªã‚¹ãƒˆè¨­å®š.<br />
+     * @param makingItemList ä½œæˆé …ç›®ãƒªã‚¹ãƒˆ
      */
     public void setMakingItemList(List<LoanItemListModel> makingItemList) {
         this.makingItemList = makingItemList;
     }
 
     /**
-     * ‘I‘ğ‰Â”\€–ÚƒŠƒXƒgæ“¾.<br />
-     * @return ‘I‘ğ‰Â”\€–ÚƒŠƒXƒg
+     * é¸æŠå¯èƒ½é …ç›®ãƒªã‚¹ãƒˆå–å¾—.<br />
+     * @return é¸æŠå¯èƒ½é …ç›®ãƒªã‚¹ãƒˆ
      */
     public List<LoanItemListModel> getSelectableItemList() {
         return selectableItemList;
     }
 
     /**
-     * ‘I‘ğ‰Â”\€–ÚƒŠƒXƒgİ’è.<br />
-     * @param selectableItemList ‘I‘ğ‰Â”\€–ÚƒŠƒXƒg
+     * é¸æŠå¯èƒ½é …ç›®ãƒªã‚¹ãƒˆè¨­å®š.<br />
+     * @param selectableItemList é¸æŠå¯èƒ½é …ç›®ãƒªã‚¹ãƒˆ
      */
     public void setSelectableItemList(List<LoanItemListModel> selectableItemList) {
         this.selectableItemList = selectableItemList;
     }
 
     /**
-     * ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{—pƒŠƒXƒgæ“¾.<br />
-     * @return ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{—pƒŠƒXƒg
+     * é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆå–å¾—.<br />
+     * @return é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public List<SelectItem> getSelectableServiceList() {
         return selectableServiceList;
     }
 
     /**
-     * ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{—pƒŠƒXƒgİ’è.<br />
-     * @param selectableServiceList ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{—pƒŠƒXƒg
+     * é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆè¨­å®š.<br />
+     * @param selectableServiceList é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public void setSelectableServiceList(List<SelectItem> selectableServiceList) {
         this.selectableServiceList = selectableServiceList;
     }
 
     /**
-     * BookƒRƒ“ƒ{—pƒŠƒXƒgæ“¾.<br />
-     * @return BookƒRƒ“ƒ{—pƒŠƒXƒg
+     * Bookã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆå–å¾—.<br />
+     * @return Bookã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public List<SelectItem> getSelectBooKList() {
         return selectBooKList;
     }
 
     /**
-     * BookƒRƒ“ƒ{—pƒŠƒXƒgİ’è.<br />
-     * @param selectBooKList BookƒRƒ“ƒ{—pƒŠƒXƒg
+     * Bookã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆè¨­å®š.<br />
+     * @param selectBooKList Bookã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public void setSelectBooKList(List<SelectItem> selectBooKList) {
         this.selectBooKList = selectBooKList;
     }
 
     /**
-     * \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{—pƒŠƒXƒgæ“¾.<br />
-     * @return \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{—pƒŠƒXƒg
+     * ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆå–å¾—.<br />
+     * @return ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public List<SelectItem> getSelectGuarantyCompanyList() {
         return selectGuarantyCompanyList;
     }
 
     /**
-     * \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{—pƒŠƒXƒgİ’è.<br />
-     * @param selectGuarantyCompanyList \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{—pƒŠƒXƒg
+     * ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆè¨­å®š.<br />
+     * @param selectGuarantyCompanyList ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public void setSelectGuarantyCompanyList(List<SelectItem> selectGuarantyCompanyList) {
         this.selectGuarantyCompanyList = selectGuarantyCompanyList;
     }
 
     /**
-     * SheetƒRƒ“ƒ{—pƒŠƒXƒgæ“¾.<br />
-     * @return SheetƒRƒ“ƒ{—pƒŠƒXƒg
+     * Sheetã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆå–å¾—.<br />
+     * @return Sheetã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public List<SelectItem> getSelectSheetList() {
         return selectSheetList;
     }
 
     /**
-     * SheetƒRƒ“ƒ{—pƒŠƒXƒgİ’è.<br />
-     * @param selectSheetList SheetƒRƒ“ƒ{—pƒŠƒXƒg
+     * Sheetã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆè¨­å®š.<br />
+     * @param selectSheetList Sheetã‚³ãƒ³ãƒœç”¨ãƒªã‚¹ãƒˆ
      */
     public void setSelectSheetList(List<SelectItem> selectSheetList) {
         this.selectSheetList = selectSheetList;
     }
 
     /**
-     * BookƒRƒ“ƒ{‘I‘ğ’læ“¾.<br />
-     * @return BookƒRƒ“ƒ{‘I‘ğ’l
+     * Bookã‚³ãƒ³ãƒœé¸æŠå€¤å–å¾—.<br />
+     * @return Bookã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public String getBook() {
         return book;
     }
 
     /**
-     * BookƒRƒ“ƒ{‘I‘ğ’lİ’è.<br />
-     * @param book BookƒRƒ“ƒ{‘I‘ğ’l
+     * Bookã‚³ãƒ³ãƒœé¸æŠå€¤è¨­å®š.<br />
+     * @param book Bookã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public void setBook(String book) {
         this.book = book;
     }
 
     /**
-     * \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{‘I‘ğ’læ“¾.<br />
-     * @return \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{‘I‘ğ’l
+     * ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœé¸æŠå€¤å–å¾—.<br />
+     * @return ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public String getGuarantyCompany() {
         return guarantyCompany;
     }
 
     /**
-     * \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{‘I‘ğ’lİ’è.<br />
-     * @param guarantyCompany \‚İ‚Ì•ÛØ‰ïĞƒRƒ“ƒ{‘I‘ğ’l
+     * ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœé¸æŠå€¤è¨­å®š.<br />
+     * @param guarantyCompany ç”³è¾¼ã¿æ™‚ã®ä¿è¨¼ä¼šç¤¾ã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public void setGuarantyCompany(String guarantyCompany) {
         this.guarantyCompany = guarantyCompany;
     }
 
     /**
-     * SheetƒRƒ“ƒ{‘I‘ğ’læ“¾.<br />
-     * @return SheetƒRƒ“ƒ{‘I‘ğ’l
+     * Sheetã‚³ãƒ³ãƒœé¸æŠå€¤å–å¾—.<br />
+     * @return Sheetã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public String getSheet() {
         return sheet;
     }
 
     /**
-     * SheetƒRƒ“ƒ{‘I‘ğ’lİ’è.<br />
-     * @param sheet SheetƒRƒ“ƒ{‘I‘ğ’l
+     * Sheetã‚³ãƒ³ãƒœé¸æŠå€¤è¨­å®š.<br />
+     * @param sheet Sheetã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public void setSheet(String sheet) {
         this.sheet = sheet;
     }
 
     /**
-     * ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‘I‘ğ’læ“¾.<br />
-     * @return ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‘I‘ğ’l
+     * é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœé¸æŠå€¤å–å¾—.<br />
+     * @return é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public String getSelectedService() {
         return selectedService;
     }
 
     /**
-     * ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‘I‘ğ’lİ’è.<br />
-     * @param selectedService ‘I‘ğ‰Â”\€–ÚƒRƒ“ƒ{‘I‘ğ’l
+     * é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœé¸æŠå€¤è¨­å®š.<br />
+     * @param selectedService é¸æŠå¯èƒ½é …ç›®ã‚³ãƒ³ãƒœé¸æŠå€¤
      */
     public void setSelectedService(String selectedService) {
         this.selectedService = selectedService;
     }
 
     /**
-     * ‹à—˜i¬”•”jæ“¾.<br />
-     * @return ‹à—˜i¬”•”j
+     * é‡‘åˆ©ï¼ˆå°æ•°éƒ¨ï¼‰å–å¾—.<br />
+     * @return é‡‘åˆ©ï¼ˆå°æ•°éƒ¨ï¼‰
      */
     public String getInterestRateDecimal() {
         return interestRateDecimal;
     }
 
     /**
-     * ‹à—˜i¬”•”jİ’è.<br />
-     * @param interestRateDecimal ‹à—˜i¬”•”j
+     * é‡‘åˆ©ï¼ˆå°æ•°éƒ¨ï¼‰è¨­å®š.<br />
+     * @param interestRateDecimal é‡‘åˆ©ï¼ˆå°æ•°éƒ¨ï¼‰
      */
     public void setInterestRateDecimal(String interestRateDecimal) {
         this.interestRateDecimal = interestRateDecimal;
     }
 
     /**
-     * ‹à—˜i®”•”jİ’è.<br />
-     * @param interestRateInt ‹à—˜i®”•”j
+     * é‡‘åˆ©ï¼ˆæ•´æ•°éƒ¨ï¼‰è¨­å®š.<br />
+     * @param interestRateInt é‡‘åˆ©ï¼ˆæ•´æ•°éƒ¨ï¼‰
      */
     public void setInterestRateInt(String interestRateInt) {
         this.interestRateInt = interestRateInt;
     }
 
     /**
-     * ‹à—˜i®”•”jæ“¾.<br />
-     * @return ‹à—˜i®”•”j
+     * é‡‘åˆ©ï¼ˆæ•´æ•°éƒ¨ï¼‰å–å¾—.<br />
+     * @return é‡‘åˆ©ï¼ˆæ•´æ•°éƒ¨ï¼‰
      */
     public String getInterestRateInt() {
         return interestRateInt;
     }
 
     /**
-     * ”NŠÔ•ÔÏŠzæ“¾.<br />
-     * @return ”NŠÔ•ÔÏŠz
+     * å¹´é–“è¿”æ¸ˆé¡å–å¾—.<br />
+     * @return å¹´é–“è¿”æ¸ˆé¡
      */
     public String getYearRepayment() {
         return yearRepayment;
     }
 
     /**
-     * ”NŠÔ•ÔÏŠzİ’è.<br />
-     * @param yearRepayment ”NŠÔ•ÔÏŠz
+     * å¹´é–“è¿”æ¸ˆé¡è¨­å®š.<br />
+     * @param yearRepayment å¹´é–“è¿”æ¸ˆé¡
      */
     public void setYearRepayment(String yearRepayment) {
         this.yearRepayment = yearRepayment;
     }
 
     /**
-     * İŒvó‹µ(V‹K)ƒtƒ‰ƒOæ“¾.<br />
-     * @return İŒvó‹µ(V‹K)ƒtƒ‰ƒO
+     * è¨­è¨ˆçŠ¶æ³(æ–°è¦)ãƒ•ãƒ©ã‚°å–å¾—.<br />
+     * @return è¨­è¨ˆçŠ¶æ³(æ–°è¦)ãƒ•ãƒ©ã‚°
      */
     public boolean isNew() {
         return this.designSituation.equals(LoanFinancingPlanningConstants.DesignSituation.NEW.code());
     }
 
     /**
-     * İŒvó‹µ(İŒv’†)ƒtƒ‰ƒOæ“¾.<br />
-     * @return İŒvó‹µ(İŒv’†)ƒtƒ‰ƒO
+     * è¨­è¨ˆçŠ¶æ³(è¨­è¨ˆä¸­)ãƒ•ãƒ©ã‚°å–å¾—.<br />
+     * @return è¨­è¨ˆçŠ¶æ³(è¨­è¨ˆä¸­)ãƒ•ãƒ©ã‚°
      */
     public boolean isDesigning() {
         return this.designSituation.equals(LoanFinancingPlanningConstants.DesignSituation.DESIGNING.code());
     }
 
     /**
-     * İŒvó‹µ(ƒT[ƒrƒX’†)ƒtƒ‰ƒOæ“¾.<br />
-     * @return İŒvó‹µ(ƒT[ƒrƒX’†)ƒtƒ‰ƒO
+     * è¨­è¨ˆçŠ¶æ³(ã‚µãƒ¼ãƒ“ã‚¹ä¸­)ãƒ•ãƒ©ã‚°å–å¾—.<br />
+     * @return è¨­è¨ˆçŠ¶æ³(ã‚µãƒ¼ãƒ“ã‚¹ä¸­)ãƒ•ãƒ©ã‚°
      */
     public boolean isServing() {
         return this.designSituation.equals(LoanFinancingPlanningConstants.DesignSituation.SERVING.code());
     }
 
     /**
-     * İŒvó‹µ(ƒT[ƒrƒXI—¹)ƒtƒ‰ƒOæ“¾.<br />
-     * @return İŒvó‹µ(ƒT[ƒrƒXI—¹)ƒtƒ‰ƒO
+     * è¨­è¨ˆçŠ¶æ³(ã‚µãƒ¼ãƒ“ã‚¹çµ‚äº†)ãƒ•ãƒ©ã‚°å–å¾—.<br />
+     * @return è¨­è¨ˆçŠ¶æ³(ã‚µãƒ¼ãƒ“ã‚¹çµ‚äº†)ãƒ•ãƒ©ã‚°
      */
     public boolean isServiceEnd() {
         return this.designSituation.equals(LoanFinancingPlanningConstants.DesignSituation.SERVICE_END.code());
     }
 
     /**
-     * İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI‚Åƒ[ƒ“‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚©æ“¾.<br />
-     * @return İŒvƒT[ƒrƒXí—Şƒ‰ƒWƒI‚Åƒ[ƒ“‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚©
+     * è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªã§ãƒ­ãƒ¼ãƒ³ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹å–å¾—.<br />
+     * @return è¨­è¨ˆã‚µãƒ¼ãƒ“ã‚¹ç¨®é¡ãƒ©ã‚¸ã‚ªã§ãƒ­ãƒ¼ãƒ³ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹
      */
     public boolean isKinri() {
         return isKinri;
     }
 
     /**
-     * ‹à—˜‘I‘ğí—Şƒ‰ƒWƒI‚Å‹à—˜‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚©æ“¾.<br />
-     * @return ‹à—˜‘I‘ğí—Şƒ‰ƒWƒI‚Å‹à—˜‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚©
+     * é‡‘åˆ©é¸æŠç¨®é¡ãƒ©ã‚¸ã‚ªã§é‡‘åˆ©ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹å–å¾—.<br />
+     * @return é‡‘åˆ©é¸æŠç¨®é¡ãƒ©ã‚¸ã‚ªã§é‡‘åˆ©ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹
      */
     public boolean isLoan() {
         return isLoan;
     }
 
     /**
-     * “o˜^Ï‚İ‚©æ“¾.<br />
-     * @return “o˜^Ï‚İ‚©
+     * ç™»éŒ²æ¸ˆã¿ã‹å–å¾—.<br />
+     * @return ç™»éŒ²æ¸ˆã¿ã‹
      */
     public boolean isRegisted() {
         return isRegisted;
     }
-    // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jSTART
+    // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰START
     /**
-     * —˜—p–¾×o—Íƒ‰ƒWƒI‚Å–³‚µ‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚©æ“¾.<br />
-     * @return —˜—p–¾×o—Íƒ‰ƒWƒI‚Å–³‚µ‚ğ‘I‘ğ‚µ‚Ä‚¢‚é‚©
+     * åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªã§ç„¡ã—ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹å–å¾—.<br />
+     * @return åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªã§ç„¡ã—ã‚’é¸æŠã—ã¦ã„ã‚‹ã‹
      */
     public boolean isRiyouMeisai() {
         return isRiyouMeisaiOut;
     }
 
     /**
-     * —˜—p–¾×o—Í(—L‚èor–³‚µ)‚ğæ“¾‚µ‚Ü‚·B
-     * @return —˜—p–¾×o—Í(—L‚èor–³‚µ)
+     * åˆ©ç”¨æ˜ç´°å‡ºåŠ›(æœ‰ã‚Šorç„¡ã—)ã‚’å–å¾—ã—ã¾ã™ã€‚
+     * @return åˆ©ç”¨æ˜ç´°å‡ºåŠ›(æœ‰ã‚Šorç„¡ã—)
      */
     public String getRiyouMeisaiOut() {
         return riyouMeisaiOut;
     }
 
     /**
-     * —˜—p–¾×o—Í(—L‚èor–³‚µ)‚ğİ’è‚µ‚Ü‚·B
-     * @param riyouMeisaiOut —˜—p–¾×o—Í(—L‚èor–³‚µ)
+     * åˆ©ç”¨æ˜ç´°å‡ºåŠ›(æœ‰ã‚Šorç„¡ã—)ã‚’è¨­å®šã—ã¾ã™ã€‚
+     * @param riyouMeisaiOut åˆ©ç”¨æ˜ç´°å‡ºåŠ›(æœ‰ã‚Šorç„¡ã—)
      */
     public void setRiyouMeisaiOut(String riyouMeisaiOut) {
         this.riyouMeisaiOut = riyouMeisaiOut;
     }
 
     /**
-     * ˆÓvŠm”F(—L‚èor–³‚µ)‚ğæ“¾‚µ‚Ü‚·B
-     * @return ˆÓvŠm”F(—L‚èor–³‚µ)
+     * æ„æ€ç¢ºèª(æœ‰ã‚Šorç„¡ã—)ã‚’å–å¾—ã—ã¾ã™ã€‚
+     * @return æ„æ€ç¢ºèª(æœ‰ã‚Šorç„¡ã—)
      */
     public String getIsiKakunin() {
         return isiKakunin;
     }
 
     /**
-     * ˆÓvŠm”F(—L‚èor–³‚µ)‚ğİ’è‚µ‚Ü‚·B
-     * @param isiKakunin ˆÓvŠm”F(—L‚èor–³‚µ)
+     * æ„æ€ç¢ºèª(æœ‰ã‚Šorç„¡ã—)ã‚’è¨­å®šã—ã¾ã™ã€‚
+     * @param isiKakunin æ„æ€ç¢ºèª(æœ‰ã‚Šorç„¡ã—)
      */
     public void setIsiKakunin(String isiKakunin) {
         this.isiKakunin = isiKakunin;
     }
 
     /**
-     * —˜—p–¾×•\¦•¶Œ¾‚ğæ“¾‚µ‚Ü‚·B
-     * @return —˜—p–¾×•\¦•¶Œ¾
+     * åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã‚’å–å¾—ã—ã¾ã™ã€‚
+     * @return åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€
      */
     public String getRiyouMeisaiHyojiMongon() {
         return riyouMeisaiHyojiMongon;
     }
 
     /**
-     * —˜—p–¾×•\¦•¶Œ¾‚ğİ’è‚µ‚Ü‚·B
-     * @param riyouMeisaiHyojiMongon —˜—p–¾×•\¦•¶Œ¾
+     * åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€ã‚’è¨­å®šã—ã¾ã™ã€‚
+     * @param riyouMeisaiHyojiMongon åˆ©ç”¨æ˜ç´°è¡¨ç¤ºæ–‡è¨€
      */
     public void setRiyouMeisaiHyojiMongon(String riyouMeisaiHyojiMongon) {
         this.riyouMeisaiHyojiMongon = riyouMeisaiHyojiMongon;
     }
 
     /**
-     * —˜—p–¾×o—Íƒ‰ƒWƒI(—L‚è)æ“¾.<br />
-     * @return —˜—p–¾×o—Íƒ‰ƒWƒI’l(—L‚è)
+     * åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ª(æœ‰ã‚Š)å–å¾—.<br />
+     * @return åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªå€¤(æœ‰ã‚Š)
      */
     public String getRiyouMeisaiOutAri() {
         return LoanFinancingPlanningConstants.RIYOUMEISAI_OUT_ARI;
     }
 
     /**
-     * —˜—p–¾×o—Íƒ‰ƒWƒI(–³‚µ)æ“¾.<br />
-     * @return —˜—p–¾×o—Íƒ‰ƒWƒI’l(–³‚µ)
+     * åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ª(ç„¡ã—)å–å¾—.<br />
+     * @return åˆ©ç”¨æ˜ç´°å‡ºåŠ›ãƒ©ã‚¸ã‚ªå€¤(ç„¡ã—)
      */
     public String getRiyouMeisaiOutNasi() {
         return LoanFinancingPlanningConstants.RIYOUMEISAI_OUT_NASI;
     }
 
     /**
-     * ó•t‹æ•ªƒ‰ƒWƒI(‰ïˆõ)æ“¾.<br />
-     * @return  ó•t‹æ•ªƒ‰ƒWƒI’l(‰ïˆõ)
+     * å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ª(ä¼šå“¡)å–å¾—.<br />
+     * @return  å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ªå€¤(ä¼šå“¡)
      */
     public String getUketukeKbnKaiin() {
         return LoanFinancingPlanningConstants.UKETUKE_KBN_KAIIN;
     }
 
     /**
-     * ó•t‹æ•ªƒ‰ƒWƒI(”ñ‰ïˆõ)æ“¾.<br />
-     * @return  ó•t‹æ•ªƒ‰ƒWƒI’l(”ñ‰ïˆõ)
+     * å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ª(éä¼šå“¡)å–å¾—.<br />
+     * @return  å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ªå€¤(éä¼šå“¡)
      */
     public String getUketukeKbnHiKaiin() {
         return LoanFinancingPlanningConstants.UKETUKE_KBN_HIKAIIN;
     }
 
     /**
-     * ó•t‹æ•ªƒ‰ƒWƒI(—¼•û)æ“¾.<br />
-     * @return  ó•t‹æ•ªƒ‰ƒWƒI’l(—¼•û)
+     * å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ª(ä¸¡æ–¹)å–å¾—.<br />
+     * @return  å—ä»˜åŒºåˆ†ãƒ©ã‚¸ã‚ªå€¤(ä¸¡æ–¹)
      */
     public String getUketukeKbnBoth() {
         return LoanFinancingPlanningConstants.UKETUKE_KBN_BOTH;
     }
 
     /**
-     * ˆÓvŠm”Fƒ‰ƒWƒI(—L‚è)æ“¾.<br />
-     * @return  ˆÓvŠm”Fƒ‰ƒWƒI’l(—L‚è)
+     * æ„æ€ç¢ºèªãƒ©ã‚¸ã‚ª(æœ‰ã‚Š)å–å¾—.<br />
+     * @return  æ„æ€ç¢ºèªãƒ©ã‚¸ã‚ªå€¤(æœ‰ã‚Š)
      */
     public String getIsiKakuninAri() {
         return LoanFinancingPlanningConstants.ISI_KAKUNIN_ARI;
     }
 
     /**
-     * ˆÓvŠm”Fƒ‰ƒWƒI(—L‚è)æ“¾.<br />
-     * @return  ˆÓvŠm”Fƒ‰ƒWƒI’l(—L‚è)
+     * æ„æ€ç¢ºèªãƒ©ã‚¸ã‚ª(æœ‰ã‚Š)å–å¾—.<br />
+     * @return  æ„æ€ç¢ºèªãƒ©ã‚¸ã‚ªå€¤(æœ‰ã‚Š)
      */
     public String getIsiKakuninNasi() {
         return LoanFinancingPlanningConstants.ISI_KAKUNIN_NASI;
     }
-    // 2013/11/19 ÂX‹âs‚©‚çæ ƒ[ƒ“æˆø‘Î‰iˆÓvŠm”F‹@”\jEND
+    // 2013/11/19 é’æ£®éŠ€è¡Œã‹ã‚‰å–è¾¼ ãƒ­ãƒ¼ãƒ³å–å¼•å¯¾å¿œï¼ˆæ„æ€ç¢ºèªæ©Ÿèƒ½ï¼‰END
 }
