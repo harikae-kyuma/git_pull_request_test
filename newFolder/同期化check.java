@@ -10,5 +10,6 @@ public class LoanFinancingPlanningBean extends EmbFacesBean {
 
     /** フェッチ確認 */
     /** プル確認 */
-    /** チーム同期化で差分 */
+    /** チーム同期化で差分 */ 
+    /** 差分出力 */
 }
