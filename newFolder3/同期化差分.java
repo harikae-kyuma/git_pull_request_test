@@ -1,3 +1,3 @@
-String cat = 'dog';
-
+String animal = 'dog';
+String animal2 = 'cat'; 
 
